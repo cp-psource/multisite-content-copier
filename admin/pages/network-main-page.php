@@ -441,25 +441,25 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 			<?php if ( 'add-page' == $current_action ): ?>
 				<h3><?php _e( 'Gib die ID oder URL der Webseite ein, die die Seiten enthält, die Du kopieren möchtest', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
 			<?php elseif( 'add-post' == $current_action ): ?>
-				<h3><?php _e( 'Enter the id or URL of the site containing the post you wish to copy', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
+				<h3><?php _e( 'Gib die ID oder URL der Webseite ein, die den Beitrag enthält, den Du kopieren möchtest', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
 			<?php elseif( 'add-cpt' == $current_action ): ?>
-				<h3><?php _e( 'Enter the id or URL of the site containing the custom post types you wish to copy', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
+				<h3><?php _e( 'Gib die ID oder URL der Webseite ein, die die benutzerdefinierten Beitragstypen enthält, die Du kopieren möchtest', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
 			<?php elseif( 'add-user' == $current_action ): ?>
-				<h3><?php _e( 'Enter the id or URL of the site containing the users you wish to copy', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
+				<h3><?php _e( 'Gib die ID oder URL der Webseite ein, die die Benutzer enthält, die Du kopieren möchtest', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
 			<?php endif; ?>
 			<input name="blog_id" type="text" id="blog_id" size="6" value="<?php echo $content_blog_id; ?>" placeholder="<?php _e( 'Blog ID', MULTISTE_CC_LANG_DOMAIN ); ?>"/>
 			<input type="hidden" name="blog_ajax_url" id="blog_ajax_url" value="<?php echo esc_url( $ajax_url ); ?>">
             <div style="display:inline-block"class="ui-widget">
-                <label for="search_for_blog"> <?php _e( 'Or search by site URL', MULTISTE_CC_LANG_DOMAIN ); ?>
+                <label for="search_for_blog"> <?php _e( 'Oder suche nach Webseiten-URL', MULTISTE_CC_LANG_DOMAIN ); ?>
 					<input type="text" id="autocomplete"  data-type="sites" class="medium-text">
-					<span class="description"><?php _e( 'Enter either the subdomain or the sub-folder, ie. for mysite.mydomain.com or mydomain.com/mysite, type "mysite"', MULTISTE_CC_LANG_DOMAIN ); ?></span>
+					<span class="description"><?php _e( 'Gib entweder die Subdomain oder den Unterordner ein, dh. Gib für mysite.mydomain.com oder mydomain.com/mysite "mysite" ein.', MULTISTE_CC_LANG_DOMAIN ); ?></span>
                 </label>
             </div>
 
             <?php if ( 'add-cpt' == $this->wizard->get_value( 'mcc_action' ) ): ?>
 	            <p class="submit">
 	            	<div class="alignleft">
-	            		<?php submit_button( __( 'Refresh post types', MULTISTE_CC_ADMIN_DIR ), 'secondary', 'mcc-refresh-cpts', false, array( 'id' => 'mcc-refresh-post-types' ) ); ?>
+	            		<?php submit_button( __( 'Beitragstypen aktualisieren', MULTISTE_CC_ADMIN_DIR ), 'secondary', 'mcc-refresh-cpts', false, array( 'id' => 'mcc-refresh-post-types' ) ); ?>
 	            	</div>
 	            	<div class="alignleft">
 	            		<span class="spinner"></span>
@@ -525,7 +525,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 							if ( user_selection.length && user_selection.val() === 'all' ) {
 								return true;
 							}
-							alert( "<?php _e( 'You must add at least one item to the list', MULTISTE_CC_LANG_DOMAIN ); ?>" );
+							alert( "<?php _e( 'Du musst der Liste mindestens ein Element hinzufügen', MULTISTE_CC_LANG_DOMAIN ); ?>" );
 							return false;
 						}
                         isFilter = false;
@@ -543,7 +543,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 	private function next_step_button( $step ) {
 		?>
 			<p class="submit">
-				<input type="submit" name="submit_step_<?php echo $step; ?>" class="button button-primary button-hero alignleft" value="<?php _e( 'Next Step &raquo;', MULTISTE_CC_LANG_DOMAIN ); ?>">
+				<input type="submit" name="submit_step_<?php echo $step; ?>" class="button button-primary button-hero alignleft" value="<?php _e( 'Nächster Schritt &raquo;', MULTISTE_CC_LANG_DOMAIN ); ?>">
 				<div class="clear"></div>
 			</p>
 		<?php
@@ -599,9 +599,9 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
 		?>
 
-			<h3><?php _e( 'Select the items that you would like to copy.', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+			<h3><?php _e( 'Wähle die Elemente aus, die Du kopieren möchtest.', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
 			<p class="about-description">
-				<?php _e( 'Check the items in the list that you would like to copy and click on Add itmes to list. Selected items appear below this message.', MULTISTE_CC_LANG_DOMAIN ); ?>
+				<?php _e( 'Markiere die Elemente in der Liste, die Du kopieren möchtest, und klicke auf Elemente zur Liste hinzufügen. Ausgewählte Elemente werden unter dieser Nachricht angezeigt.', MULTISTE_CC_LANG_DOMAIN ); ?>
 			</p>
 
             <ul id="posts-list">
@@ -609,7 +609,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
             </ul>
 
 			<div class="alignleft" style="width:35%;">
-	            <h3><?php _e( 'Additional Options', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+	            <h3><?php _e( 'Zusatzoptionen', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
 	            <?php $options = mcc_get_additional_settings( $type ); ?>
 				<ul>
 					<?php foreach( $options as $option_slug => $label ): ?>
@@ -620,7 +620,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 			<div class="alignright" id="mcc-posts-list" style="width:60%;">
 				<input type="hidden" id="src_blog_id" name="src_blog_id" value="<?php echo $blog_id; ?>">
 				<?php switch_to_blog($this->wizard->get_value( 'content_blog_id' )); ?>
-                <?php $posts_table->search_box( __( 'Search', MULTISTE_CC_LANG_DOMAIN ), 'search' ); ?><br/><br/>
+                <?php $posts_table->search_box( __( 'Suche', MULTISTE_CC_LANG_DOMAIN ), 'search' ); ?><br/><br/>
 				<?php $posts_table->display(); ?>
                 <?php restore_current_blog(); ?>
 			</div>
@@ -641,8 +641,8 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 		$table->prepare_items();
 
 		?>
-			<h3><?php _e( 'Select the plugins you want to activate', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
-			<p><?php _e( 'Network only or already network activated plugins are not displayed in the list', MULTISTE_CC_LANG_DOMAIN ); ?>
+			<h3><?php _e( 'Wähle die Plugins aus, die Du aktivieren möchtest', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+			<p><?php _e( 'Nur Netzwerk oder bereits Netzwerk aktivierte Plugins werden nicht in der Liste angezeigt', MULTISTE_CC_LANG_DOMAIN ); ?>
 
 		<?php $table->display();
 	}
@@ -701,24 +701,24 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
             	<?php echo $users_list; ?>
             </ul>
 
-            <h3><?php _e( 'Select users to copy', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
+            <h3><?php _e( 'Wähle Benutzer zum Kopieren aus', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
   			<p class="about-description">
-				<?php _e( 'If you are not copying all users, then check the users in the list that you would like to copy, select Add To List and click on Apply. Selected users appear below this message.', MULTISTE_CC_LANG_DOMAIN ); ?>
+				<?php _e( 'Wenn Du nicht alle Benutzer kopierst, markiere die Benutzer in der Liste, die Du kopieren möchtest, wähle Zur Liste hinzufügen und klicke auf Übernehmen. Ausgewählte Benutzer werden unter dieser Nachricht angezeigt.', MULTISTE_CC_LANG_DOMAIN ); ?>
 			</p>
 
             <div class="alignleft" style="width:35%;">
-            	<h3><?php _e( 'Add Users', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
+            	<h3><?php _e( 'Benutzer hinzufügen', MULTISTE_CC_LANG_DOMAIN ); ?></h3><br/>
 	            <label>
-					<input type="radio" name="users_selection" <?php checked( $user_selection == 'all' ); ?> value="all" /> <?php _e( 'All users', MULTISTE_CC_LANG_DOMAIN ); ?>
+					<input type="radio" name="users_selection" <?php checked( $user_selection == 'all' ); ?> value="all" /> <?php _e( 'Alle Benutzer', MULTISTE_CC_LANG_DOMAIN ); ?>
 				</label><br/><br/>
 
 				<label>
-					<input type="radio" name="users_selection" <?php checked( $user_selection == 'ids' ); ?> value="ids"> <?php _e( 'Selected users', MULTISTE_CC_LANG_DOMAIN ); ?>
+					<input type="radio" name="users_selection" <?php checked( $user_selection == 'ids' ); ?> value="ids"> <?php _e( 'Ausgewählte Benutzer', MULTISTE_CC_LANG_DOMAIN ); ?>
 				</label>
 			</div>
 			<div class="alignright" id="mcc-users-list" style="width:60%;">
 				<input type="hidden" id="src_blog_id" name="src_blog_id" value="<?php echo $blog_id; ?>">
-				<?php $users_table->search_box( __( 'Search', MULTISTE_CC_LANG_DOMAIN ), 'search' ); ?><br/><br/>
+				<?php $users_table->search_box( __( 'Suche', MULTISTE_CC_LANG_DOMAIN ), 'search' ); ?><br/><br/>
 				<?php $users_table->display(); ?>
 			</div>
 			<div class="clear"></div>
@@ -730,29 +730,29 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 	private function render_step_4() {
 		?>
 			<form action="" method="post" name="wizardform" id="wizardform">
-				<h3><?php _e( 'Select the destination sites', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+				<h3><?php _e( 'Wähle die Zielseiten aus', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
 				<?php wp_nonce_field( 'step_4' ); ?>
 
 				<?php if ( $this->wizard->get_value( 'mcc_action' ) !== 'activate-plugin' ): ?>
 					<p>
 						<label>
 							<input type="radio" name="dest_blog_type" id="dest_blog_type_all" value="all" <?php checked( $this->wizard->get_value( 'dest_blog_type' ), 'all' ); ?>>
-							<?php _e( 'All Sites', MULTISTE_CC_LANG_DOMAIN ); ?>
+							<?php _e( 'Alle Seiten', MULTISTE_CC_LANG_DOMAIN ); ?>
 						</label>
 					</p>
 				<?php endif; ?>
 				<p>
 					<label>
 						<input type="radio" name="dest_blog_type" id="dest_blog_type_list" value="list" <?php checked( $this->wizard->get_value( 'dest_blog_type' ), 'list' ); ?>>
-						<?php _e( 'Individual Site(s)', MULTISTE_CC_LANG_DOMAIN ); ?>
+						<?php _e( 'Einzelne Seite(n)', MULTISTE_CC_LANG_DOMAIN ); ?>
 					</label>
 				</p>
 				<div id="blogs-list-wrap">
-					<input name="blog_id" type="text" id="blog_id" size="6" style="float: left; margin-right: 10px;" placeholder="<?php _e( 'Site ID', MULTISTE_CC_LANG_DOMAIN ); ?>"/>
+					<input name="blog_id" type="text" id="blog_id" size="6" style="float: left; margin-right: 10px;" placeholder="<?php _e( 'Seiten ID', MULTISTE_CC_LANG_DOMAIN ); ?>"/>
 		            <div style="display:inline-block"class="ui-widget">
 		                <label for="search_for_blog"> <?php _e( 'Or search by site URL', MULTISTE_CC_LANG_DOMAIN ); ?>
 							<input type="text" id="autocomplete" data-type="sites" class="medium-text">
-							<span class="spinner"></span> <input type="button" class="button-secondary" name="add-blog" id="add-blog" value="<?php _e( 'Add Site', MULTISTE_CC_LANG_DOMAIN ); ?>"></input>
+							<span class="spinner"></span> <input type="button" class="button-secondary" name="add-blog" id="add-blog" value="<?php _e( 'Seite hinzufügen', MULTISTE_CC_LANG_DOMAIN ); ?>"></input>
 		                </label>
 		            </div>
 					<div class="clear"></div>
@@ -774,7 +774,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 		        <p>
 					<label>
 						<input type="radio" name="dest_blog_type" id="dest_blog_type_group" value="group" <?php checked( $this->wizard->get_value( 'dest_blog_type' ), 'group' ); ?>>
-						<?php _e( 'Site Group', MULTISTE_CC_LANG_DOMAIN ); ?>
+						<?php _e( 'Webseiten-Gruppe', MULTISTE_CC_LANG_DOMAIN ); ?>
 					</label>
 				</p>
 				<select name="group" id="dest_blog_type_group_selector">
@@ -786,7 +786,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 					<p>
 						<label>
 							<input type="radio" name="dest_blog_type" id="dest_blog_type_nbt_group" value="nbt_group" <?php checked( $this->wizard->get_value( 'dest_blog_type' ), 'nbt_group' ); ?>>
-							<?php _e( 'Select by Blog Templates groups', MULTISTE_CC_LANG_DOMAIN ); ?>
+							<?php _e( 'Nach Blog-Vorlagengruppen auswählen', MULTISTE_CC_LANG_DOMAIN ); ?>
 						</label>
 					</p>
 					<select name="nbt_group" id="dest_blog_type_nbt_group_selector">
@@ -812,7 +812,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 		ob_start();
 		?>
 			<li id="<?php echo $slug; ?>-<?php echo $id; ?>">
-				<span class="remove-box"><a class="mcc-remove-<?php echo $slug; ?>" href="" data-<?php echo $slug; ?>-id="<?php echo $id; ?>">Remove</a></span>
+				<span class="remove-box"><a class="mcc-remove-<?php echo $slug; ?>" href="" data-<?php echo $slug; ?>-id="<?php echo $id; ?>">Entfernen</a></span>
 				<span class="id-box"><?php echo $id; ?></span> <span class="title-box"><?php echo $title; ?></span>
 				<input type="hidden" name="<?php echo $slug; ?>s_ids[]" value="<?php echo $id; ?>"></input>
 			</li>
@@ -839,7 +839,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 						<input type="radio" id="mcc_cpt_custom" name="mcc_cpt" value="custom" <?php checked( $selected ); ?>>
 						<input type="text" name="mcc_cpt_slug" id="mcc_cpt_slug" value="">
 						<?php echo $title; ?><br/>
-						<span class="description"><?php _e( 'Or insert the slug of your Custom Post Type here if you don\'t see it in the list', MULTISTE_CC_LANG_DOMAIN ); ?></span>
+						<span class="description"><?php _e( 'Oder füge den Slug Deines benutzerdefinierten Beitragstyps hier ein, wenn Du ihn nicht in der Liste siehst', MULTISTE_CC_LANG_DOMAIN ); ?></span>
 					</label>
 					<script>
 						jQuery(document).ready(function($) {
@@ -918,7 +918,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
 			?>
 			<p>
-				<?php _e( 'Your selected items have been copied.', MULTISTE_CC_LANG_DOMAIN ); ?>
+				<?php _e( 'Deine ausgewählten Artikel wurden kopiert.', MULTISTE_CC_LANG_DOMAIN ); ?>
 			</p>
 			<?php
 
@@ -941,7 +941,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
 			?>
 			<p>
-				<?php _e( 'Enqueueing all blogs, please do not close or refresh this window', MULTISTE_CC_LANG_DOMAIN ); ?>
+				<?php _e( 'Alle Blogs in die Warteschlange gestellt, bitte dieses Fenster nicht schließen oder aktualisieren', MULTISTE_CC_LANG_DOMAIN ); ?>
 			</p>
 			<?php
 		}
@@ -952,7 +952,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
 		?>
 		<p>
-			<?php _e( 'Your selected items have been copied.', MULTISTE_CC_LANG_DOMAIN ); ?>
+			<?php _e( 'Deine ausgewählten Elemente wurden kopiert.', MULTISTE_CC_LANG_DOMAIN ); ?>
 		</p>
 		<?php
 		$this->show_redirect_notice();
@@ -973,7 +973,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 		if ( ! empty( $redirect_url ) ) {
 			?>
 			<p>
-				<?php printf( __( 'Click <a href="%s">here</a> to return to the previous page.', MULTISTE_CC_LANG_DOMAIN ), esc_url( $redirect_url ) ); ?>
+				<?php printf( __( 'Klicke <a href="%s">hier</a>, um zur vorherigen Seite zurückzukehren.', MULTISTE_CC_LANG_DOMAIN ), esc_url( $redirect_url ) ); ?>
 			</p>
 			<?php
 		}
@@ -1060,7 +1060,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  					return false;
 
  				if ( ! isset( $_POST['mcc_action'] ) )
- 					mcc_add_error( 'wrong-action', __( 'Please select an option', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'wrong-action', __( 'Bitte wähle eine Option', MULTISTE_CC_LANG_DOMAIN ) );
 
  				if ( ! mcc_is_error() ) {
  					// Let's see if we've gone back to the first step and change the action.
@@ -1089,17 +1089,17 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  					return false;
 
  				if ( ! isset( $_POST['blog_id'] ) || ! $blog_details = get_blog_details( absint( $_POST['blog_id'] ) ) )
- 					mcc_add_error( 'blog-id', __( 'The Blog ID does not exist', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'blog-id', __( 'Die Blog-ID existiert nicht', MULTISTE_CC_LANG_DOMAIN ) );
 
 
  				$action = $this->wizard->get_value( 'mcc_action' );
  				if ( 'add-cpt' == $action && empty( $_POST['mcc_cpt'] ) ) {
  					// We need a CPT slug if we are copying a CPT!
- 					mcc_add_error( 'blog-id', __( 'You must select a post type', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'blog-id', __( 'Du musst einen Beitragstyp auswählen', MULTISTE_CC_LANG_DOMAIN ) );
  				}
  				elseif ( 'add-cpt' == $action && 'custom' == $_POST['mcc_cpt'] ) {
  					if ( empty( $_POST['mcc_cpt_slug'] ) )
- 						mcc_add_error( 'mcc-cpt', __( 'You must select a post type', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'mcc-cpt', __( 'Du musst einen Beitragstyp auswählen', MULTISTE_CC_LANG_DOMAIN ) );
  					else
  						$mcc_cpt_slug = $_POST['mcc_cpt_slug'];
  				}
@@ -1126,19 +1126,19 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  				$action = $this->wizard->get_value( 'mcc_action' );
  				$post_actions = array( 'add-post', 'add-page', 'add-cpt' );
  				if ( in_array( $action, $post_actions ) && empty( $_POST['posts_ids'] ) )
- 					mcc_add_error( 'select-post', __( 'You must add at least one item to the list', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'select-post', __( 'Du musst der Liste mindestens ein Element hinzufügen', MULTISTE_CC_LANG_DOMAIN ) );
 
  				if ( 'activate-plugin' == $action && empty( $_POST['plugins'] ) )
- 					mcc_add_error( 'select-plugin', __( 'You must select at least one plugin', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'select-plugin', __( 'Du musst mindestens ein Plugin auswählen', MULTISTE_CC_LANG_DOMAIN ) );
 
  				if ( 'add-user' == $action ) {
  					if ( empty( $_POST['users_selection'] ) ) {
- 						mcc_add_error( 'select-user', __( 'You must select one option', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'select-user', __( 'Du musst eine Option auswählen', MULTISTE_CC_LANG_DOMAIN ) );
  					}
  					else {
  						$this->wizard->set_value( 'users_selection', $_POST['users_selection'] );
  						if ( 'ids' == $_POST['users_selection'] && empty( $_POST['users_ids'] ) )
- 							mcc_add_error( 'select-user', __( 'You add at least one user to the list', MULTISTE_CC_LANG_DOMAIN ) );
+ 							mcc_add_error( 'select-user', __( 'Du fügst der Liste mindestens einen Benutzer hinzu', MULTISTE_CC_LANG_DOMAIN ) );
  					}
 
  				}
@@ -1189,7 +1189,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
  				$type = '';
  				if ( ! isset( $_POST['dest_blog_type'] ) || ! in_array( $_POST['dest_blog_type'], array( 'all', 'list', 'group', 'nbt_group' ) ) ) {
- 					mcc_add_error( 'blog-type', __( 'Please, select an option', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'blog-type', __( 'Bitte wähle eine Option', MULTISTE_CC_LANG_DOMAIN ) );
  				}
  				else {
  					$type = $_POST['dest_blog_type'];
@@ -1211,7 +1211,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  				// List selected by the user
  				if ( 'list' == $type ) {
  					if ( ! isset( $_POST['blogs_ids'] ) || ! is_array( $_POST['blogs_ids'] ) ) {
- 						mcc_add_error( 'blog-id', __( 'You have not selected any blog', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'blog-id', __( 'Du hast keinen Blog ausgewählt', MULTISTE_CC_LANG_DOMAIN ) );
  						return;
  					}
  					$this->wizard->set_value( 'dest_blogs_ids', $_POST['blogs_ids'] );
@@ -1220,7 +1220,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  				// Group of blogs
  				if ( 'group' == $type ) {
  					if ( empty( $_POST['group'] ) ) {
- 						mcc_add_error( 'blog-group', __( 'You have not selected any group', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'blog-group', __( 'Du hast keine Gruppe ausgewählt', MULTISTE_CC_LANG_DOMAIN ) );
  						return;
  					}
 
@@ -1228,12 +1228,12 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 
  					$model = mcc_get_model();
  					if ( ! $model->is_group( $group ) )
- 						mcc_add_error( 'wrong-group', __( 'You have selected a wrong group', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'wrong-group', __( 'Du hast eine falsche Gruppe ausgewählt', MULTISTE_CC_LANG_DOMAIN ) );
 
  					$blogs = $model->get_blogs_from_group( $group );
 
  					if ( empty( $blogs ) ) {
- 						mcc_add_error( 'wrong-group', __( 'There are no blogs attached to that group.', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'wrong-group', __( 'Dieser Gruppe sind keine Blogs zugeordnet.', MULTISTE_CC_LANG_DOMAIN ) );
  					}
  					else {
  						// Saving the blogs IDs in the wizard
@@ -1250,12 +1250,12 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  				if ( 'nbt_group' == $type ) {
 
  					if ( ! function_exists( 'nbt_get_model' ) ) {
- 						mcc_add_error( 'nbt-error', __( 'There was an error while trying to get the template information', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'nbt-error', __( 'Beim Abrufen der Vorlageninformationen ist ein Fehler aufgetreten', MULTISTE_CC_LANG_DOMAIN ) );
  						return;
  					}
 
  					if ( empty( $_POST['nbt_group'] ) ) {
- 						mcc_add_error( 'nbt-group', __( 'You have not selected any template', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'nbt-group', __( 'Du hast keine Vorlage ausgewählt', MULTISTE_CC_LANG_DOMAIN ) );
  						return;
  					}
 
@@ -1264,13 +1264,13 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
  					$model = nbt_get_model();
  					$template = $model->get_template( $group );
  					if ( empty( $template ) )
- 						mcc_add_error( 'wrong-nbt-group', __( 'You have selected a wrong template', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'wrong-nbt-group', __( 'Du hast eine falsche Vorlage ausgewählt', MULTISTE_CC_LANG_DOMAIN ) );
 
  					$nbt_model = mcc_get_nbt_model();
  					$blogs_relationships = $nbt_model->get_template_blogs( $group );
 
  					if ( empty( $blogs_relationships ) ) {
- 						mcc_add_error( 'wrong-nbt-group', __( 'There are no blogs attached to that template.', MULTISTE_CC_LANG_DOMAIN ) );
+ 						mcc_add_error( 'wrong-nbt-group', __( 'Es sind keine Blogs an diese Vorlage angehängt.', MULTISTE_CC_LANG_DOMAIN ) );
  					}
  					else {
  						// Saving the blogs IDs in the wizard

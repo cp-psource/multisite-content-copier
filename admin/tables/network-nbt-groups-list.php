@@ -11,8 +11,8 @@ class MCC_NBT_Groups_List_Table extends WP_List_Table {
 	function __construct(){
         //Set parent defaults
         parent::__construct( array(
-            'singular'  => __( 'Blog Templates Group', MULTISTE_CC_ADMIN_DIR ),  
-            'plural'    => __( 'Blog Templates Groups', MULTISTE_CC_ADMIN_DIR ), 
+            'singular'  => __( 'Blog-Vorlagengruppe', MULTISTE_CC_ADMIN_DIR ),  
+            'plural'    => __( 'Blog-Vorlagengruppen', MULTISTE_CC_ADMIN_DIR ), 
             'ajax'      => false        
         ) );
         
@@ -21,9 +21,9 @@ class MCC_NBT_Groups_List_Table extends WP_List_Table {
 
     function get_columns(){
         $columns = array(
-            'name'      => __( 'Template name', MULTISTE_CC_ADMIN_DIR ),
-            'description'      => __( 'Template description', MULTISTE_CC_ADMIN_DIR ),
-            'count'     => __( 'Sites', MULTISTE_CC_ADMIN_DIR )
+            'name'      => __( 'Vorlagenname', MULTISTE_CC_ADMIN_DIR ),
+            'description'      => __( 'Vorlagenbeschreibung', MULTISTE_CC_ADMIN_DIR ),
+            'count'     => __( 'Webseiten', MULTISTE_CC_ADMIN_DIR )
         );
         return $columns;
     }

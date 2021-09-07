@@ -15,23 +15,26 @@ class Multisite_Content_Copier_Network_Settings_Menu extends Multisite_Content_C
  	public function render_content() {
 
  		if ( isset( $_GET['updated'] ) && $_GET['updated'] == 'true' )
- 			Multisite_Content_Copier_Errors_Handler::show_updated_notice( __( 'Settings saved', MULTISTE_CC_LANG_DOMAIN ) );
+ 			Multisite_Content_Copier_Errors_Handler::show_updated_notice( __( 'Einstellungen gespeichert', MULTISTE_CC_LANG_DOMAIN ) );
 
  		mcc_show_errors();
 
  		?>
 			<form action="" method="post">
-				<h3><?php _e( 'New Blog Templates Integration', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+				<h3><?php _e( 'Neue Blog-Vorlagen-Integration', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
 				<p>
-					<?php _e('Checking this option allows the selecting of a New Blog Template Group as a destination for copied content.'); ?>
+					<?php _e('Um diese Option zu nutzen benötigst du das <a href="https://n3rds.work/produkte/neue-blog-vorlagen-plugin/" target="_blank" rel="noopener">Neue Blog Vorlagen Plugin</a>.'); ?>
+				</p>
+				<p>
+					<?php _e('Wenn Du diese Option aktivierst, kannst Du eine neue Blog-Vorlagengruppe als Ziel für kopierte Inhalte auswählen.'); ?>
 				</p>
 				<table class="form-table">
-					<?php $this->render_row( __( 'Activate', MULTISTE_CC_LANG_DOMAIN ), array( &$this, 'render_nbt_integration_field' ) ); ?>
+					<?php $this->render_row( __( 'Aktivieren', MULTISTE_CC_LANG_DOMAIN ), array( &$this, 'render_nbt_integration_field' ) ); ?>
 				</table>
 
 				<?php wp_nonce_field( 'submit_mcc_settings', 'mcc_settings_nonce' ); ?>
 
-				<?php submit_button( __( 'Save changes', MULTISTE_CC_LANG_DOMAIN ), 'primary', 'submit_mcc_settings' ); ?>
+				<?php submit_button( __( 'Änderungen speichern', MULTISTE_CC_LANG_DOMAIN ), 'primary', 'submit_mcc_settings' ); ?>
 			</form>
  		<?php
  		
@@ -57,7 +60,7 @@ class Multisite_Content_Copier_Network_Settings_Menu extends Multisite_Content_C
 
  			if ( isset( $input['blog_templates_integration'] ) ) {
  				if ( ! mcc_is_nbt_active() ) {
- 					mcc_add_error( 'nbt-not-active', __( 'You need first to network activate the New Blog Templates plugin', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'nbt-not-active', __( 'Du musst zuerst das New Blog Templates Plugin im Netzwerk aktivieren', MULTISTE_CC_LANG_DOMAIN ) );
  				}
  				else {
  					$current_settings['blog_templates_integration'] = true;

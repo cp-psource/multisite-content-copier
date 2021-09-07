@@ -81,9 +81,9 @@ class MCC_Users_List_Table extends WP_List_Table {
 		$blogname_columns = ( is_subdomain_install() ) ? __( 'Domain' ) : __( 'Path' );
 		$sites_columns = array(
 			'cb'          => '<input type="checkbox" />',
-			'username'    => __( 'Username' ),
+			'username'    => __( 'Benutzername' ),
 			'email'		  => __( 'Email' ),
-			'role'		  => __( 'Role' ),
+			'role'		  => __( 'Rolle' ),
 		);
 
 		return $sites_columns;
@@ -115,7 +115,7 @@ class MCC_Users_List_Table extends WP_List_Table {
 	function extra_tablenav( $which ) {
         ?>
             <div class="alignleft actions">
-            	<input type="submit" name="" id="doaction" class="primary button action" value="<?php echo esc_attr( __( 'Add items to the list', MULTISTE_CC_LANG_DOMAIN ) ); ?>">
+            	<input type="submit" name="" id="doaction" class="primary button action" value="<?php echo esc_attr( __( 'Elemente zur Liste hinzufügen', MULTISTE_CC_LANG_DOMAIN ) ); ?>">
             </div>
             <div class="alignleft actions">
                 <span class="spinner"></span>
@@ -142,7 +142,7 @@ class MCC_Users_List_Table extends WP_List_Table {
 
 		if ( ! empty( $columns['cb'] ) ) {
 			static $cb_counter = 1;
-			$columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Select All' ) . '</label>'
+			$columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Wähle Alle' ) . '</label>'
 				. '<input id="cb-select-all-' . $cb_counter . '" ' . disabled( $this->enabled == false, true, false ) . ' type="checkbox" />';
 			$cb_counter++;
 		}

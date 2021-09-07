@@ -15,8 +15,8 @@ class MCC_Post_Meta_Box {
 			//wp_enqueue_script( 'mcc-meta-box-sync', MULTISTE_CC_ASSETS_URL . 'js/meta-box-sync.js', array( 'jquery' ) );
 
 			$object = array(
-				'select_an_option' => __( 'You must select a destination', MULTISTE_CC_LANG_DOMAIN ),
-				'select_a_group' => __( 'You must select a group', MULTISTE_CC_LANG_DOMAIN )
+				'select_an_option' => __( 'Du musst ein Ziel auswählen', MULTISTE_CC_LANG_DOMAIN ),
+				'select_a_group' => __( 'Du musst eine Gruppe auswählen', MULTISTE_CC_LANG_DOMAIN )
 			);
 			wp_localize_script( 'mcc-meta-box', 'mcc_meta_texts', $object );
 		}
@@ -37,7 +37,7 @@ class MCC_Post_Meta_Box {
 		foreach ( $post_types as $post_type ) {
 			add_meta_box( 
 		        'copier-meta-box',
-		        __( 'Multisite Content Copier: Copy content', MULTISTE_CC_LANG_DOMAIN ),
+		        __( 'Multisite Content Kopierer: Inhalte kopieren', MULTISTE_CC_LANG_DOMAIN ),
 		        array( &$this, 'render_copier_meta_box' ),
 		        $post_type,
 		        'normal',
@@ -61,14 +61,14 @@ class MCC_Post_Meta_Box {
 		
 
 		if ( ! in_array( $post->post_status, array( 'publish', 'draft', 'pending', 'future' ) ) ) {
-			echo '<p>' . __( 'Please save this post if you would like to copy it.', MULTISTE_CC_LANG_DOMAIN ) . '</p>';
+			echo '<p>' . __( 'Bitte speichere diesen Beitrag, wenn Du ihn kopieren möchtest.', MULTISTE_CC_LANG_DOMAIN ) . '</p>';
 
 		}
 		else {
 
 			?>
 				<?php if ( get_post_meta( $post->ID, 'mcc_copied' ) ): ?>
-					<p><?php _e( 'You have already copied this post, copying it again could cause duplicated posts', MULTISTE_CC_LANG_DOMAIN ); ?></p>
+					<p><?php _e( 'Du hast diesen Beitrag bereits kopiert, ein erneutes Kopieren kann zu doppelten Beiträgen führen', MULTISTE_CC_LANG_DOMAIN ); ?></p>
 				<?php endif; ?>
 				
 				<?php $this->render_form_fields( 'mcc_' ); ?>
@@ -85,7 +85,7 @@ class MCC_Post_Meta_Box {
 					);
 					$link = wp_nonce_url( $link, 'mcc_submit_meta_box' );
 				?>
-				<a id="mcc_copy_link" class="button-primary" href="<?php echo esc_url( $link ); ?>"><?php _e( 'Copy', MULTISTE_CC_LANG_DOMAIN ); ?></a>
+				<a id="mcc_copy_link" class="button-primary" href="<?php echo esc_url( $link ); ?>"><?php _e( 'Kopieren', MULTISTE_CC_LANG_DOMAIN ); ?></a>
 			<?php 
 		}
 	}
@@ -102,7 +102,7 @@ class MCC_Post_Meta_Box {
 		
 
 		if ( ! in_array( $post->post_status, array( 'publish', 'draft', 'pending' ) ) ) {
-			echo '<p>' . __( 'Please save this post if you would like to sync it.', MULTISTE_CC_LANG_DOMAIN ) . '</p>';
+			echo '<p>' . __( 'Bitte speichere diesen Beitrag, wenn Du ihn synchronisieren möchtest.', MULTISTE_CC_LANG_DOMAIN ) . '</p>';
 		}
 		else {
 
@@ -111,7 +111,7 @@ class MCC_Post_Meta_Box {
 
 		wp_nonce_field( 'mcc_sync_post', '_mccnonce' );
 		?>
-			<input type="submit" class="button-primary" name="mcc_sync_submit" value="<?php _e( 'Sync content', MULTISTE_CC_LANG_DOMAIN ); ?>" />
+			<input type="submit" class="button-primary" name="mcc_sync_submit" value="<?php _e( 'Inhalte synchronisieren', MULTISTE_CC_LANG_DOMAIN ); ?>" />
 		<?php
 
 		//$this->render_sync_scripts();
@@ -120,18 +120,18 @@ class MCC_Post_Meta_Box {
 	private function render_form_fields( $prefix_slug ) {
 		global $post;
 		?>
-			<h4><?php _e( 'Select destinations', MULTISTE_CC_LANG_DOMAIN ); ?></h4>
+			<h4><?php _e( 'Ziele auswählen', MULTISTE_CC_LANG_DOMAIN ); ?></h4>
 			<div style="margin-left:20px;">
 				<p>
 					<label>
 						<input type="radio" name="<?php echo $prefix_slug; ?>dest_blog_type" class="<?php echo $prefix_slug; ?>dest_blog_type" value="all"> 
-						<?php _e( 'All sites', MULTISTE_CC_LANG_DOMAIN ); ?>
+						<?php _e( 'Alle Webseiten', MULTISTE_CC_LANG_DOMAIN ); ?>
 					</label>
 				</p>
 				<p>
 					<label>
 						<input type="radio" name="<?php echo $prefix_slug; ?>dest_blog_type" class="<?php echo $prefix_slug; ?>dest_blog_type" value="group">
-						<?php _e( 'Site group', MULTISTE_CC_LANG_DOMAIN ); ?>
+						<?php _e( 'Webseiten-Gruppe', MULTISTE_CC_LANG_DOMAIN ); ?>
 					</label>
 					<select name="<?php echo $prefix_slug; ?>blog_group" id="<?php echo $prefix_slug; ?>blog_group">
 						<?php mcc_get_groups_dropdown(); ?>
@@ -142,7 +142,7 @@ class MCC_Post_Meta_Box {
 					<p>
 						<label>
 							<input type="radio" name="<?php echo $prefix_slug; ?>dest_blog_type" class="<?php echo $prefix_slug; ?>dest_blog_type" value="nbt-group">
-							<?php _e( 'Blog Templates Group', MULTISTE_CC_LANG_DOMAIN ); ?>
+							<?php _e( 'Blog-Vorlagengruppe', MULTISTE_CC_LANG_DOMAIN ); ?>
 						</label>
 						<select name="<?php echo $prefix_slug; ?>nbt_blog_group" id="<?php echo $prefix_slug; ?>nbt_blog_group">
 							<?php mcc_get_nbt_groups_dropdown(); ?>
@@ -151,7 +151,7 @@ class MCC_Post_Meta_Box {
 				<?php endif; ?>
 			</div>
 
-			<h4><?php _e( 'Additional Options', MULTISTE_CC_LANG_DOMAIN ); ?></h4>
+			<h4><?php _e( 'Zusatzoptionen', MULTISTE_CC_LANG_DOMAIN ); ?></h4>
 			<?php
 				switch ( $post->post_type ) {
 					case 'post':
@@ -208,18 +208,18 @@ class MCC_Post_Meta_Box {
 			$errors = array();
 
 			if ( empty( $_POST['mcc_sync_dest_blog_type'] ) || ! in_array( $_POST['mcc_sync_dest_blog_type'], array( 'all', 'group', 'nbt-group' ) ) ) {
-				$errors[] = new WP_Error( 'sync_destination', __( 'You must select a destination', MULTISTE_CC_LANG_DOMAIN ) );
+				$errors[] = new WP_Error( 'sync_destination', __( 'Du musst ein Ziel auswählen', MULTISTE_CC_LANG_DOMAIN ) );
 			}
 
 			if ( 'group' == $destination ) {
 				if ( empty( $_POST['mcc_sync_blog_group'] ) ) {
-					$errors[] = new WP_Error( 'sync_blog_group', __( 'You must select a group', MULTISTE_CC_LANG_DOMAIN ) );
+					$errors[] = new WP_Error( 'sync_blog_group', __( 'Du musst eine Gruppe auswählen', MULTISTE_CC_LANG_DOMAIN ) );
 				}
 			}
 
 			if ( 'nbt-group' == $destination ) {
 				if ( empty( $_POST['mcc_sync_nbt_blog_group'] ) ) {
-					$errors[] = new WP_Error( 'sync_blog_group', __( 'You must select a group', MULTISTE_CC_LANG_DOMAIN ) );
+					$errors[] = new WP_Error( 'sync_blog_group', __( 'Du musst eine Gruppe auswählen', MULTISTE_CC_LANG_DOMAIN ) );
 				}
 			}
 

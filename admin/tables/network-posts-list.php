@@ -14,8 +14,8 @@ class MCC_Posts_List_Table extends WP_List_Table {
 		$this->selected = $selected;
 
         parent::__construct( array(
-            'singular'  => __( 'Post', MULTISTE_CC_LANG_DOMAIN ),  
-            'plural'    => __( 'Posts', MULTISTE_CC_LANG_DOMAIN ), 
+            'singular'  => __( 'Beitrag', MULTISTE_CC_LANG_DOMAIN ),  
+            'plural'    => __( 'Beiträge', MULTISTE_CC_LANG_DOMAIN ), 
             'ajax'      => false        
         ) );
 	}
@@ -102,9 +102,9 @@ class MCC_Posts_List_Table extends WP_List_Table {
 		$blogname_columns = ( is_subdomain_install() ) ? __( 'Domain' ) : __( 'Path' );
 		$sites_columns = array(
 			'cb'          => '<input type="checkbox" />',
-			'title'    	  => __( 'Title', MULTISTE_CC_LANG_DOMAIN ),
+			'title'    	  => __( 'Titel', MULTISTE_CC_LANG_DOMAIN ),
 			'status'	  => __( 'Status', MULTISTE_CC_LANG_DOMAIN ),
-			'date'		  => __( 'Created', MULTISTE_CC_LANG_DOMAIN )
+			'date'		  => __( 'Erstellt', MULTISTE_CC_LANG_DOMAIN )
 		);
 
 		return $sites_columns;
@@ -117,7 +117,7 @@ class MCC_Posts_List_Table extends WP_List_Table {
 
 	function column_title( $item ) {
 		if ( empty( $item->post_title ) )
-			$title = __( '(no title)', MULTISTE_CC_LANG_DOMAIN );
+			$title = __( '(kein Titel)', MULTISTE_CC_LANG_DOMAIN );
 		else
 			$title = $item->post_title;
 
@@ -133,20 +133,20 @@ class MCC_Posts_List_Table extends WP_List_Table {
 		$status = '';
 		switch ( $item->post_status ) {
 			case 'private':
-				$status = __('Privately Published');
+				$status = __('Privat veröffentlicht');
 				break;
 			case 'publish':
-				$status = __('Published');
+				$status = __('Veröffentlicht');
 				break;
 			case 'future':
-				$status = __('Scheduled');
+				$status = __('Geplant');
 				break;
 			case 'pending':
-				$status = __('Pending Review');
+				$status = __('Ausstehende Bewertung');
 				break;
 			case 'draft':
 			case 'auto-draft':
-				$status = __('Draft');
+				$status = __('Entwurf');
 				break;
 		}
 		return $status;
@@ -174,14 +174,14 @@ class MCC_Posts_List_Table extends WP_List_Table {
 		$taxonomies = $this->get_post_type_taxonomies();
         ?>
         	<div class="alignleft actions">
-            	<input type="submit" name="" id="doaction" class="button-primary action" value="<?php echo esc_attr( __( 'Add items to the list', MULTISTE_CC_LANG_DOMAIN ) ); ?>">
+            	<input type="submit" name="" id="doaction" class="button-primary action" value="<?php echo esc_attr( __( 'Elemente zur Liste hinzufügen', MULTISTE_CC_LANG_DOMAIN ) ); ?>">
             </div>
             <div class="alignleft actions">
             	<?php $dropdowns = ''; ?>
                 <?php foreach ( $taxonomies as $tax => $tax_name ): ?>
 					<?php 
 						$dropdowns .= wp_dropdown_categories( array(
-							'show_option_all' => sprintf( __( 'Show all %s'), $tax_name ),
+							'show_option_all' => sprintf( __( 'Alle %s anzeigen'), $tax_name ),
 							'name' => $tax,
 							'id' => 'filter_' . $tax,
 							'taxonomy' => $tax,

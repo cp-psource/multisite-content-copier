@@ -3,8 +3,8 @@ class MCC_Sites_List_Table extends WP_List_Table {
 	function __construct( $args = array() ) {
 
         parent::__construct( array(
-            'singular'  => __( 'Site', MULTISTE_CC_LANG_DOMAIN ),  
-            'plural'    => __( 'Sites', MULTISTE_CC_LANG_DOMAIN ), 
+            'singular'  => __( 'Webseite', MULTISTE_CC_LANG_DOMAIN ),  
+            'plural'    => __( 'Webseiten', MULTISTE_CC_LANG_DOMAIN ), 
             'ajax'      => false        
         ) );
 	}
@@ -115,7 +115,7 @@ class MCC_Sites_List_Table extends WP_List_Table {
 		$sites_columns = array(
 			'cb'          => '<input type="checkbox" />',
 			'blogname'    => __( 'URL' ),
-			'groups'	  => __( 'Groups', MULTISTE_CC_LANG_DOMAIN )
+			'groups'	  => __( 'Gruppen', MULTISTE_CC_LANG_DOMAIN )
 		);
 
 		return $sites_columns;
@@ -156,13 +156,13 @@ class MCC_Sites_List_Table extends WP_List_Table {
                     <select name="group_selected">
                     	<?php mcc_get_groups_dropdown(); ?>
                     </select>
-                    <input type="submit" name="mcc-assign-group" id="mcc-assign-group" class="button" value="<?php _e( 'Assign to Group', MULTISTE_CC_LANG_DOMAIN ); ?>">
-                    <input type="submit" name="mcc-remove-from-group" id="mcc-remove-group" class="button" value="<?php _e( 'Remove from Group', MULTISTE_CC_LANG_DOMAIN ); ?>">
+                    <input type="submit" name="mcc-assign-group" id="mcc-assign-group" class="button" value="<?php _e( 'Zu Gruppe zuweisen', MULTISTE_CC_LANG_DOMAIN ); ?>">
+                    <input type="submit" name="mcc-remove-from-group" id="mcc-remove-group" class="button" value="<?php _e( 'Aus der Gruppe entfernen', MULTISTE_CC_LANG_DOMAIN ); ?>">
                 </div>
                 <script>
                 	jQuery(document).ready(function($) {
                 		$('#mcc-blogs-groups-table-form').submit(function(e) {
-                			var confirm = confirm( "<?php _e( 'Are you sure?', MULTISTE_CC_LANG_DOMAIN ); ?>" );
+                			var confirm = confirm( "<?php _e( 'Bist du sicher?', MULTISTE_CC_LANG_DOMAIN ); ?>" );
                 			return confirm;
                 		});
                 	});

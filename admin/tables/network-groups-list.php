@@ -11,8 +11,8 @@ class MCC_Groups_List_Table extends WP_List_Table {
 	function __construct(){
         //Set parent defaults
         parent::__construct( array(
-            'singular'  => __( 'Group', MULTISTE_CC_ADMIN_DIR ),  
-            'plural'    => __( 'Groups', MULTISTE_CC_ADMIN_DIR ), 
+            'singular'  => __( 'Gruppe', MULTISTE_CC_ADMIN_DIR ),  
+            'plural'    => __( 'Gruppen', MULTISTE_CC_ADMIN_DIR ), 
             'ajax'      => false        
         ) );
         
@@ -22,8 +22,8 @@ class MCC_Groups_List_Table extends WP_List_Table {
     function get_columns(){
         $columns = array(
             'cb'        => '<input type="checkbox" />',
-            'name'      => __( 'Group name', MULTISTE_CC_ADMIN_DIR ),
-            'count'     => __( 'Blogs count', MULTISTE_CC_ADMIN_DIR )
+            'name'      => __( 'Gruppenname', MULTISTE_CC_ADMIN_DIR ),
+            'count'     => __( 'Blogs Zähler', MULTISTE_CC_ADMIN_DIR )
         );
         return $columns;
     }
@@ -52,8 +52,8 @@ class MCC_Groups_List_Table extends WP_List_Table {
         );
 
         $actions = array(
-            'edit' => sprintf( __( '<a href="%s">Edit</a>', MULTISTE_CC_ADMIN_DIR ), $edit_link ),
-            'delete'    => sprintf( __( '<a href="%s">Delete</a>', MULTISTE_CC_ADMIN_DIR ), $delete_link )
+            'edit' => sprintf( __( '<a href="%s">Bearbeiten</a>', MULTISTE_CC_ADMIN_DIR ), $edit_link ),
+            'delete'    => sprintf( __( '<a href="%s">Löschen</a>', MULTISTE_CC_ADMIN_DIR ), $delete_link )
         );
 
         return stripslashes_deep( $item['group_name'] ) . $this->row_actions($actions);
@@ -66,7 +66,7 @@ class MCC_Groups_List_Table extends WP_List_Table {
 
     function get_bulk_actions() {
         $actions = array(
-            'delete'    => __( 'Delete', MULTISTE_CC_ADMIN_DIR )
+            'delete'    => __( 'Löschen', MULTISTE_CC_ADMIN_DIR )
         );
         return $actions;
     }
@@ -81,7 +81,7 @@ class MCC_Groups_List_Table extends WP_List_Table {
 
             if ( isset( $_POST['groups'] ) && is_array( $_POST['groups'] ) ) {
                 if ( ! wp_verify_nonce( $_POST['_wpnonce'], 'bulk-' . $this->_args['plural'] ) )
-                    wp_die( 'Security check error', MULTISTE_CC_ADMIN_DIR );
+                    wp_die( 'Fehler bei der Sicherheitsprüfung', MULTISTE_CC_ADMIN_DIR );
 
                 foreach ( $_POST['groups'] as $group )
                     $model->delete_blog_group( absint( $group ) );

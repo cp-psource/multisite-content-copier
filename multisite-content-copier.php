@@ -4,7 +4,7 @@ Plugin Name: Multisite-Content-Kopierer
 Plugin URI: https://n3rds.work/docs/multisite-content-kopierer/
 Description: Kopiere alle Inhalte von einer beliebigen Webseite in Deinem Netzwerk auf eine andere Webseite oder Gruppe von Webseiten im selben Netzwerk.
 Author: WMS N@W
-Version: 1.5.5
+Version: 1.5.6
 Author URI: https://n3rds.work
 Text Domain: mcc
 Domain Path: lang
@@ -132,7 +132,7 @@ class Multisite_Content_Copier {
 	private function set_globals() {
 
 		// Basics
-		define( 'MULTISTE_CC_VERSION', '1.5.5' );
+		define( 'MULTISTE_CC_VERSION', '1.5.6' );
 		define( 'MULTISTE_CC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 		define( 'MULTISTE_CC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 		define( 'MULTISTE_CC_PLUGIN_FILE_DIR', plugin_dir_path( __FILE__ ) . 'multisite-content-copier.php' );
@@ -229,7 +229,7 @@ class Multisite_Content_Copier {
 			delete_site_option( 'mcc_schema_created' );
 		}
 
-		if ( version_compare( $current_version, '1.5.5', '<' ) ) {
+		if ( version_compare( $current_version, '1.5.6', '<' ) ) {
 			require_once( MULTISTE_CC_INCLUDES_DIR . 'upgrade.php' );
 			mcc_upgrade_153();
 		}
