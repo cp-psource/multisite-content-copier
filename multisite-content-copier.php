@@ -8,6 +8,8 @@ Version: 1.5.6
 Author URI: https://n3rds.work
 Text Domain: mcc
 Domain Path: lang
+Requires at least: 3.6
+Tested up to: 4.9
 Network:true
 Tags: multisite plugin, multisite
 */
