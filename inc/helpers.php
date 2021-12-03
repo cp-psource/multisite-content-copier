@@ -63,7 +63,7 @@ function mcc_get_groups_dropdown( $selected = '' ) {
 	$model = mcc_get_model();
 	$groups = $model->get_blogs_groups();
 	?>
-		<option value=""><?php _e( 'Select a group', MULTISTE_CC_LANG_DOMAIN ); ?></option>
+		<option value=""><?php _e( 'Wähle eine Gruppe', MULTISTE_CC_LANG_DOMAIN ); ?></option>
 	    <?php foreach ( $groups as $group ): ?>
 	    	<option value="<?php echo $group['ID']; ?>"><?php echo $group['group_name']; ?></option>
 		<?php endforeach; ?>
@@ -107,7 +107,7 @@ function mcc_get_nbt_groups_dropdown( $selected = '' ) {
 	}
 
 	?>
-		<option value=""><?php _e( 'Select a group', MULTISTE_CC_LANG_DOMAIN ); ?></option>
+		<option value=""><?php _e( 'Wähle eine Gruppe', MULTISTE_CC_LANG_DOMAIN ); ?></option>
 	    <?php foreach ( $groups as $group ): ?>
 	    	<option value="<?php echo $group['ID']; ?>"><?php echo $group['name']; ?></option>
 		<?php endforeach; ?>
@@ -124,9 +124,9 @@ function mcc_get_registered_cpts() {
 	unset( $post_types['post'] );
 
 	/**
-	 * Filters the registered Custom Post TYpes for a given blog
+	 * Filtert die registrierten benutzerdefinierten Beitragstypen für einen bestimmten Blog
 	 * 
-	 * @param $post_types Registered Post Types
+	 * @param $post_types Registrierte Post Types
 	 * @param Blog ID
 	 */
 	return apply_filters( 'mcc_get_registered_cpts', $post_types, get_current_blog_id() );

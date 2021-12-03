@@ -57,4 +57,8 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 = 1.5.6 = DerN3rd =
 
+* Textanpassungen
+
+= 1.5.6 = DerN3rd =
+
 * Release 

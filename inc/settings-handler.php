@@ -1,21 +1,21 @@
 <?php
 
 /**
- * We need this class if we want to handle settings efficiently
- * Settings will be loaded just when needed
- * 
- * You can create different classes for different settings groups
- * if your plugin is too big
+ * Wir brauchen diese Klasse, wenn wir Einstellungen effizient handhaben wollen
+ * Einstellungen werden nur bei Bedarf geladen
+ *
+ * Du kannst verschiedene Klassen für verschiedene Einstellungsgruppen erstellen
+ * wenn dein Plugin zu groß ist 
  */
 
 class Multisite_Content_Copier_Settings_Handler {
 
 	static $instance;
 
-	// Settings slug for DB
+	// Einstellungsslug für DB
 	private $settings_slug = 'multisite_content_copier_settings';
 
-	// Settings for the plugin
+	// Einstellungen für das Plugin
 	private $settings = array();
 
 	private $additional_settings = array();
@@ -23,34 +23,34 @@ class Multisite_Content_Copier_Settings_Handler {
 	public function __construct() {
 		$this->additional_settings = array(
 			'post' => array(
-				'copy_images'	=> __( 'Copy images (required for featured images)', MULTISTE_CC_LANG_DOMAIN ),
-				'update_date'	=> __( 'Update post created date', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_parents'	=> __( 'Copy parents', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_comments' => __( 'Copy comments', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_terms' 	=> __( 'Copy terms ( Tags & Categories )', MULTISTE_CC_LANG_DOMAIN )
+				'copy_images'	=> __( 'Bilder kopieren (erforderlich für vorgestellte Bilder)', MULTISTE_CC_LANG_DOMAIN ),
+				'update_date'	=> __( 'Erstellungsdatum des Beitrags aktualisieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_parents'	=> __( 'Eltern kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_comments' => __( 'Kommentare kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_terms' 	=> __( 'Bedingungen kopieren ( Tags & Kategorien )', MULTISTE_CC_LANG_DOMAIN )
 			),
 			'page' => array(
-				'copy_images'	=> __( 'Copy images', MULTISTE_CC_LANG_DOMAIN ),
-				'update_date'	=> __( 'Update page created date', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_parents'	=> __( 'Copy parents', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_comments' => __( 'Copy comments', MULTISTE_CC_LANG_DOMAIN )
+				'copy_images'	=> __( 'Bilder kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'update_date'	=> __( 'Erstellungsdatum der Seite aktualisieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_parents'	=> __( 'Eltern kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_comments' => __( 'Kommentare kopieren', MULTISTE_CC_LANG_DOMAIN )
 			),
 			'cpt' => array(
-				'copy_images'	=> __( 'Copy images (required for featured images)', MULTISTE_CC_LANG_DOMAIN ),
-				'update_date'	=> __( 'Update post created date', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_parents'	=> __( 'Copy parents', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_comments' => __( 'Copy comments', MULTISTE_CC_LANG_DOMAIN ),
-				'copy_terms' 	=> __( 'Copy terms ( Tags, Categories... )', MULTISTE_CC_LANG_DOMAIN )
+				'copy_images'	=> __( 'Bilder kopieren (erforderlich für vorgestellte Bilder)', MULTISTE_CC_LANG_DOMAIN ),
+				'update_date'	=> __( 'Erstellungsdatum des Beitrags aktualisieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_parents'	=> __( 'Eltern kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_comments' => __( 'Kommentare kopieren', MULTISTE_CC_LANG_DOMAIN ),
+				'copy_terms' 	=> __( 'Bedingungen kopieren ( Tags & Kategorien )', MULTISTE_CC_LANG_DOMAIN )
 			),
 			'user' => array(
-				'default_role'	=> __( 'If the role does not exist in destination blog, assign this role to the user' )
+				'default_role'	=> __( 'Wenn die Rolle im Zielblog nicht vorhanden ist, weise dem Benutzer diese Rolle zu' )
 			)
 		);
 	}
 	/**
-	 * Get the default settings
+	 * Holt sich die Standardeinstellungen
 	 * 
-	 * @return Array of settings
+	 * @return Array der Einstellungen
 	 */
 	public function get_default_settings() {
 		return array(
@@ -59,7 +59,7 @@ class Multisite_Content_Copier_Settings_Handler {
 	}
 
 	/**
-	 * Return an instance of the class
+	 * Eine Instanz der Klasse zurückgeben
 	 * 
 	 * @return Object
 	 */
@@ -71,9 +71,9 @@ class Multisite_Content_Copier_Settings_Handler {
 	}
 
 	/**
-	 * Get the plugin settings
+	 * Holt sich die Plugin-Einstellungen
 	 * 
-	 * @return Array of settings
+	 * @return Array der Einstellungen
 	 */
 	public function get_settings() {
 		if ( empty( $this->settings ) )
@@ -83,7 +83,7 @@ class Multisite_Content_Copier_Settings_Handler {
 	}
 
 	/**
-	 * Update the settings
+	 * Aktualisiert die Einstellungen
 	 * 
 	 * @param Array $new_settings
 	 */
@@ -96,7 +96,7 @@ class Multisite_Content_Copier_Settings_Handler {
 	}
 
 	/**
-	 * Initializes the plugin settings
+	 * Initialisiert die Plugin-Einstellungen
 	 * 
 	 * @since 0.1
 	 */
@@ -107,9 +107,9 @@ class Multisite_Content_Copier_Settings_Handler {
 
 
 	/**
-	 * Get the settings slug used on DB
+	 * Holt sich den Einstellungsslug, der auf DB verwendet wird
 	 * 
-	 * @return Array Plugin Settings
+	 * @return Array Plugin-Einstellungen
 	 */
 	public function get_settings_slug() {
 		return $this->settings_slug;
