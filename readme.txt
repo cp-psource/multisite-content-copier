@@ -59,6 +59,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 * Textanpassungen
 * Deprecated .click() Fix
+* Linkanpassung für Blog-Vorlagen Integration
 
 = 1.5.6 = DerN3rd =
 
