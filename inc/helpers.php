@@ -174,5 +174,5 @@ function mcc_basic_roles_dropdown( $selected = false ) {
 }
 
 function mcc_is_nbt_active() {
-	return is_plugin_active_for_network( 'blogtemplates/blogtemplates.php' );
+	return is_plugin_active_for_network( 'blogvorlagen/blogtemplates.php' );
 }

@@ -1,7 +1,7 @@
 === Multisite-Content-Kopierer ===
 Contributors: DerN3rd (WMS N@W)
 Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
-Tags: multisite, suche, netzwerksuche
+Tags: multisite, suche, netzwerk-kopierer
 Requires at least: 4.9
 Tested up to: 4.9
 Stable tag: 1.5.7
@@ -61,6 +61,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * Deprecated .click() Fix
 * Linkanpassung für Blog-Vorlagen Integration
 * PSource Updater v1.1
+* Blogvorlagen-Integration
 
 = 1.5.6 = DerN3rd =
 

@@ -7,8 +7,8 @@ class MCC_NBT_Integrator {
 	public function __construct() {
 		add_action( 'init', array( &$this, 'init' ) );
 
-		add_action( 'deactivate_blogtemplates/blogtemplates.php', array( &$this, 'deactivate_nbt_integration' ) );
-		add_action( 'activate_blogtemplates/blogtemplates.php', array( &$this, 'maybe_show_nbt_integration_notice' ) );
+		add_action( 'deactivate_blogvorlagen/blogtemplates.php', array( &$this, 'deactivate_nbt_integration' ) );
+		add_action( 'activate_blogvorlagen/blogtemplates.php', array( &$this, 'maybe_show_nbt_integration_notice' ) );
 
 	}
 
