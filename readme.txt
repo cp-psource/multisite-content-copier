@@ -55,11 +55,12 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
-= 1.5.6 = DerN3rd =
+= 1.5.7 = DerN3rd =
 
 * Textanpassungen
 * Deprecated .click() Fix
 * Linkanpassung für Blog-Vorlagen Integration
+* PSource Updater v1.1
 
 = 1.5.6 = DerN3rd =
 
