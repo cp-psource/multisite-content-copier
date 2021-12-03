@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 	$('#mcc-refresh-post-types').trigger('click');
 
 	// POSTS/PAGES/CPTs SELECTION
-	$( '#mcc-posts-list #doaction' ).click( function( e ) { 
+	$( '#mcc-posts-list #doaction' ).on("click",  function( e ) { 
 		e.preventDefault();
 
 		var $this = $(this);
@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$( '#mcc-users-list #doaction' ).click( function( e ) { 
+	$( '#mcc-users-list #doaction' ).on("click",  function( e ) { 
 		e.preventDefault();
 
 		var $this = $(this);
@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
 
 	// BLOGS SELECTIONS
 	var current_blogs = {};
-	$( '#add-blog' ).click( function( e ) { 
+	$( '#add-blog' ).on("click", function( e ) { 
 		e.preventDefault();
 
 		$('.spinner').show();
@@ -202,7 +202,7 @@ jQuery(document).ready(function($) {
 
 	update_blog_click_event();
 	function update_blog_click_event() {
-		$( '.mcc-remove-blog' ).click( function(e)  {
+		$( '.mcc-remove-blog' ).on("click", function(e)  {
 			e.preventDefault();
 			var blog_id = $(this).data('blog-id');
 			$('#blog-' + blog_id ).remove(); 
@@ -211,7 +211,7 @@ jQuery(document).ready(function($) {
 
 	update_post_click_event();
 	function update_post_click_event() {
-		$( '.mcc-remove-post' ).click( function(e)  {
+		$( '.mcc-remove-post' ).on("click", function(e)  {
 			e.preventDefault();
 			var post_id = $(this).data('post-id');
 			update_items_ids(post_id);
@@ -224,7 +224,7 @@ jQuery(document).ready(function($) {
 
 	update_user_click_event();
 	function update_user_click_event() {
-		$( '.mcc-remove-user' ).click( function(e)  {
+		$( '.mcc-remove-user' ).on("click", function(e)  {
 			e.preventDefault();
 			var user_id = $(this).data('user-id');
 			update_items_ids( user_id );

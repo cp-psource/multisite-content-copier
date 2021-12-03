@@ -532,7 +532,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 					});
 
                     // POSTS/PAGES/CPTs SELECTION
-                    $( '#filter, #search-submit' ).click( function( e ) {
+                    $( '#filter, #search-submit' ).on("click",  function( e ) {
                         isFilter = true;
                     });
 				});
@@ -843,7 +843,7 @@ class Multisite_Content_Copier_Network_Main_Menu extends Multisite_Content_Copie
 					</label>
 					<script>
 						jQuery(document).ready(function($) {
-							$('#mcc_cpt_slug').click(function(){
+							$('#mcc_cpt_slug').on("click", function(){
 								$('#mcc_cpt_custom').attr('checked', true);
 							});
 						});
