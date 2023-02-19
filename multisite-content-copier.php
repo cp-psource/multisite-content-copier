@@ -7,11 +7,11 @@ Author: WMS N@W
 Version: 1.5.7
 Author URI: https://n3rds.work
 Text Domain: mcc
-Domain Path: lang
+Domain Path: languages
 Requires at least: 3.6
 Tested up to: 4.9
 Network:true
-Tags: multisite plugin, multisite
+Tags: multisite plugin, multisite, classicpress-plugin
 */
 
 /*
@@ -34,9 +34,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 /**
  * The main class of the plugin
  */
-
 require 'psource/psource-plugin-update/psource-plugin-updater.php';
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=multisite-content-copier', 
 	__FILE__, 
 	'multisite-content-copier' 
@@ -140,7 +140,7 @@ class Multisite_Content_Copier {
 		define( 'MULTISTE_CC_PLUGIN_FILE_DIR', plugin_dir_path( __FILE__ ) . 'multisite-content-copier.php' );
 
 		// Language domain
-		define( 'MULTISTE_CC_LANG_DOMAIN', 'mcc' );
+		define( 'MULTISTE_CC_LANG_DOMAIN', MULTISTE_CC_LANG_DOMAIN );
 
 		// URLs
 		define( 'MULTISTE_CC_ASSETS_URL', MULTISTE_CC_PLUGIN_URL . 'assets/' );
@@ -297,7 +297,7 @@ class Multisite_Content_Copier {
 		$locale = apply_filters( 'plugin_locale', get_locale(), MULTISTE_CC_LANG_DOMAIN );
 
 		load_textdomain( MULTISTE_CC_LANG_DOMAIN, WP_LANG_DIR . '/' . MULTISTE_CC_LANG_DOMAIN . '/' . MULTISTE_CC_LANG_DOMAIN . '-' . $locale . '.mo' );
-		load_plugin_textdomain( MULTISTE_CC_LANG_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+		load_plugin_textdomain( MULTISTE_CC_LANG_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**

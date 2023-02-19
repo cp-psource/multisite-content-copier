@@ -24,7 +24,7 @@ class Multisite_Content_Copier_Network_Blogs_Groups_Menu extends Multisite_Conte
 	 		$wp_list_table->prepare_items();
 	 		?>
 			<form id="mcc-blogs-groups-search-form" method="post">
-				<?php $wp_list_table->search_box( __( 'Websiten suchen', MULTISTE_CC_LANG_DOMAIN ), 'blog-search' ); ?>
+				<?php $wp_list_table->search_box( __( 'Webseiten suchen', MULTISTE_CC_LANG_DOMAIN ), 'blog-search' ); ?>
 			</form>
 			
 			<?php

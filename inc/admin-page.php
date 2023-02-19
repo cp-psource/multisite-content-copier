@@ -2,7 +2,7 @@
 
 /**
  * This class is the parent of all admin pages
- * It has a WordPress structure and has the possibility to add tabs
+ * It has a ClassicPress structure and has the possibility to add tabs
  * and more stuff
  */
 
@@ -66,7 +66,7 @@ abstract class Multisite_Content_Copier_Admin_Page {
 			'network_menu' => false,
 			'enqueue_scripts' => false,
 			'enqueue_styles' => false,
-			'forbidden_message' => 'You do not have enough permissions to access to this page',
+			'forbidden_message' => 'Du hast nicht genügend Berechtigungen für den Zugriff auf diese Seite',
 			'on_load' => array()
 		);
 
@@ -117,7 +117,7 @@ abstract class Multisite_Content_Copier_Admin_Page {
 				if ( method_exists( $this, 'enqueue_scripts' ) )
 					$this->enqueue_scripts();	
 				else
-					throw new Exception( 'You need to declare enqueue_scripts method in <i>' . get_class( $this ) . '</i> class', 1);
+					throw new Exception( 'Du musst die Methode enqueue_scripts in der Klasse <i>' . get_class( $this ) . '</i> deklarieren', 1);
 			} catch (Exception $e) {
 				// There's no function declared in the subclass
 				Multisite_Content_Copier_Errors_Handler::show_exception( $e->getMessage() );
@@ -139,7 +139,7 @@ abstract class Multisite_Content_Copier_Admin_Page {
 				if ( method_exists( $this, 'enqueue_styles' ) )
 					$this->enqueue_styles();	
 				else
-					throw new Exception( 'You need to declare enqueue_styles method in <i>' . get_class( $this ) . '</i> class', 1);
+					throw new Exception( 'Du musst die Methode enqueue_styles in der Klasse <i>' . get_class( $this ) . '</i> deklarieren', 1);
 					
 			} catch ( Exception $e ) {
 				// There's no function declared in the subclass

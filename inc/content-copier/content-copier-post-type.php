@@ -588,7 +588,7 @@ class Multisite_Content_Copier_Post_Type_Copier extends Multisite_Content_Copier
      * Fetch an image and download it. Then create a new empty file for  it
      * that can be filled later
      * 
-     * Code based on WordPress Importer plugin
+     * Code based on ClassicPress Importer plugin
      * 
      * @return WP_Error/Array Image properties/Error
      */

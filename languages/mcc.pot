@@ -1,0 +1,588 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Multisite-Content-Kopierer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-19 16:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-4.9.22\n"
+"X-Domain: mcc"
+
+#: admin/tables/network-posts-list.php:120
+msgid "(kein Titel)"
+msgstr ""
+
+#: inc/errors-handler.php:29
+#, php-format
+msgid "<b>%s Plugin Fehler</b>: %s"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:100
+msgid "Abbrechen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:372
+msgid "Aktion auswählen"
+msgstr ""
+
+#: admin/pages/network-settings-page.php:32
+msgid "Aktivieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:712
+msgid "Alle Benutzer"
+msgstr ""
+
+#: admin/pages/network-main-page.php:944
+msgid ""
+"Alle Blogs in die Warteschlange gestellt, bitte dieses Fenster nicht "
+"schließen oder aktualisieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:740
+msgid "Alle Seiten"
+msgstr ""
+
+#: admin/edit-post.php:128
+msgid "Alle Webseiten"
+msgstr ""
+
+#: admin/tables/network-blogs-list.php:160
+msgid "Aus der Gruppe entfernen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:376
+msgid "Ausführen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:716
+msgid "Ausgewählte Benutzer"
+msgstr ""
+
+#: inc/settings-handler.php:30 inc/settings-handler.php:43
+msgid "Bedingungen kopieren ( Tags & Kategorien )"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1253
+msgid "Beim Abrufen der Vorlageninformationen ist ein Fehler aufgetreten"
+msgstr ""
+
+#: admin/tables/network-posts-list.php:17
+msgid "Beitrag"
+msgstr ""
+
+#: admin/pages/network-main-page.php:402 admin/tables/network-posts-list.php:18
+msgid "Beiträge"
+msgstr ""
+
+#: admin/pages/network-main-page.php:404
+msgid "Benutzer"
+msgstr ""
+
+#: admin/pages/network-main-page.php:710
+msgid "Benutzer hinzufügen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:403
+msgid "Benutzerdefinierter Beitragstyp (Produkte, Veranstaltungen...)"
+msgstr ""
+
+#: inc/settings-handler.php:33
+msgid "Bilder kopieren"
+msgstr ""
+
+#: inc/settings-handler.php:26 inc/settings-handler.php:39
+msgid "Bilder kopieren (erforderlich für vorgestellte Bilder)"
+msgstr ""
+
+#: admin/tables/network-blogs-list.php:165
+msgid "Bist du sicher?"
+msgstr ""
+
+#: admin/edit-post.php:64
+msgid "Bitte speichere diesen Beitrag, wenn Du ihn kopieren möchtest."
+msgstr ""
+
+#: admin/edit-post.php:105
+msgid "Bitte speichere diesen Beitrag, wenn Du ihn synchronisieren möchtest."
+msgstr ""
+
+#: admin/pages/network-main-page.php:1063
+#: admin/pages/network-main-page.php:1192
+msgid "Bitte wähle eine Option"
+msgstr ""
+
+#: admin/pages/network-main-page.php:450
+msgid "Blog ID"
+msgstr ""
+
+#: admin/edit-post.php:145
+msgid "Blog-Vorlagengruppe"
+msgstr ""
+
+#: multisite-content-copier.php:312
+msgid "Content Kopierer"
+msgstr ""
+
+#: inc/integration/brainpress.php:16
+msgid "Courses and Units"
+msgstr ""
+
+#: inc/integration/nbt-integration.php:51
+#, php-format
+msgid ""
+"Das Plugin Neue Blog-Vorlagen ist aktiviert. Vielleicht möchtest Du die <a "
+"href=\"%s\">Integration mit Multisite Content Kopierer aktivieren</a> <a "
+"href=\"%s\" class=\"button\">Verwerfen</a>"
+msgstr ""
+
+#: inc/content-copier/content-copier-post-type.php:621
+msgid "Datei der Größe Null heruntergeladen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:921
+msgid "Deine ausgewählten Artikel wurden kopiert."
+msgstr ""
+
+#: admin/pages/network-main-page.php:955
+msgid "Deine ausgewählten Elemente wurden kopiert."
+msgstr ""
+
+#: admin/pages/network-main-page.php:1092
+msgid "Die Blog-ID existiert nicht"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:79
+msgid "Die Gruppe existiert nicht"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:85
+msgid "Die Gruppe wurde aktualisiert."
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:128
+msgid "Die Gruppe wurde hinzugefügt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1236
+msgid "Dieser Gruppe sind keine Blogs zugeordnet."
+msgstr ""
+
+#: admin/pages/network-main-page.php:1141
+msgid "Du fügst der Liste mindestens einen Benutzer hinzu"
+msgstr ""
+
+#: admin/edit-post.php:71
+msgid ""
+"Du hast diesen Beitrag bereits kopiert, ein erneutes Kopieren kann zu "
+"doppelten Beiträgen führen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1231
+msgid "Du hast eine falsche Gruppe ausgewählt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1267
+msgid "Du hast eine falsche Vorlage ausgewählt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1223
+msgid "Du hast keine Gruppe ausgewählt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1258
+msgid "Du hast keine Vorlage ausgewählt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1214
+msgid "Du hast keinen Blog ausgewählt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:528 admin/pages/network-main-page.php:1129
+msgid "Du musst der Liste mindestens ein Element hinzufügen"
+msgstr ""
+
+#: admin/edit-post.php:18 admin/edit-post.php:211
+msgid "Du musst ein Ziel auswählen"
+msgstr ""
+
+#: admin/edit-post.php:19 admin/edit-post.php:216 admin/edit-post.php:222
+msgid "Du musst eine Gruppe auswählen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1136
+msgid "Du musst eine Option auswählen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1098
+#: admin/pages/network-main-page.php:1102
+msgid "Du musst einen Beitragstyp auswählen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1132
+msgid "Du musst mindestens ein Plugin auswählen"
+msgstr ""
+
+#: admin/pages/network-settings-page.php:63
+msgid "Du musst zuerst das Neue Blog-Vorlagen Plugin im Netzwerk aktivieren"
+msgstr ""
+
+#: multisite-content-copier.php:338 multisite-content-copier.php:339
+msgid "Einstellungen"
+msgstr ""
+
+#: admin/pages/network-settings-page.php:18
+msgid "Einstellungen gespeichert"
+msgstr ""
+
+#: admin/pages/network-main-page.php:747
+msgid "Einzelne Seite(n)"
+msgstr ""
+
+#: admin/pages/network-main-page.php:374
+msgid "Elemente auswählen"
+msgstr ""
+
+#: admin/tables/network-posts-list.php:177
+#: admin/tables/network-users-list.php:118
+msgid "Elemente zur Liste hinzufügen"
+msgstr ""
+
+#: inc/settings-handler.php:28 inc/settings-handler.php:35
+#: inc/settings-handler.php:41
+msgid "Eltern kopieren"
+msgstr ""
+
+#: admin/tables/network-posts-list.php:107
+msgid "Erstellt"
+msgstr ""
+
+#: inc/settings-handler.php:34
+msgid "Erstellungsdatum der Seite aktualisieren"
+msgstr ""
+
+#: inc/settings-handler.php:27 inc/settings-handler.php:40
+msgid "Erstellungsdatum des Beitrags aktualisieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:1273
+msgid "Es sind keine Blogs an diese Vorlage angehängt."
+msgstr ""
+
+#: admin/tables/network-posts-list.php:196
+msgid "Filter"
+msgstr ""
+
+#: admin/pages/network-main-page.php:274 admin/pages/network-main-page.php:303
+msgid "Für diesen Blog sind keine benutzerdefinierten Beiträge registriert"
+msgstr ""
+
+#: admin/pages/network-main-page.php:444
+msgid ""
+"Gib die ID oder URL der Webseite ein, die den Beitrag enthält, den Du "
+"kopieren möchtest"
+msgstr ""
+
+#: admin/pages/network-main-page.php:448
+msgid ""
+"Gib die ID oder URL der Webseite ein, die die Benutzer enthält, die Du "
+"kopieren möchtest"
+msgstr ""
+
+#: admin/pages/network-main-page.php:446
+msgid ""
+"Gib die ID oder URL der Webseite ein, die die benutzerdefinierten "
+"Beitragstypen enthält, die Du kopieren möchtest"
+msgstr ""
+
+#: admin/pages/network-main-page.php:442
+msgid ""
+"Gib die ID oder URL der Webseite ein, die die Seiten enthält, die Du "
+"kopieren möchtest"
+msgstr ""
+
+#: admin/pages/network-main-page.php:455
+msgid ""
+"Gib entweder die Subdomain oder den Unterordner ein, dh. Gib für mysite."
+"mydomain.com oder mydomain.com/mysite \"mysite\" ein."
+msgstr ""
+
+#: multisite-content-copier.php:326 admin/tables/network-blogs-list.php:118
+msgid "Gruppen"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:94
+#: admin/pages/network-blogs-groups.php:154
+msgid "Gruppenname"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:175
+#: admin/pages/network-blogs-groups.php:196
+msgid "Gruppenname darf nicht leer sein"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://n3rds.work"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://n3rds.work/docs/multisite-content-kopierer/"
+msgstr ""
+
+#: admin/edit-post.php:114
+msgid "Inhalte synchronisieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:976
+#, php-format
+msgid "Klicke <a href=\"%s\">hier</a>, um zur vorherigen Seite zurückzukehren."
+msgstr ""
+
+#: inc/settings-handler.php:29 inc/settings-handler.php:36
+#: inc/settings-handler.php:42
+msgid "Kommentare kopieren"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Kopiere alle Inhalte von einer beliebigen Webseite in Deinem Netzwerk auf "
+"eine andere Webseite oder Gruppe von Webseiten im selben Netzwerk."
+msgstr ""
+
+#: admin/edit-post.php:88
+msgid "Kopieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:604
+msgid ""
+"Markiere die Elemente in der Liste, die Du kopieren möchtest, und klicke auf "
+"Elemente zur Liste hinzufügen. Ausgewählte Elemente werden unter dieser "
+"Nachricht angezeigt."
+msgstr ""
+
+#: multisite-content-copier.php:107
+msgid ""
+"Multisite Content Copier ist ein Plugin nur für Multisites, bitte "
+"deaktiviere es."
+msgstr ""
+
+#: admin/edit-post.php:40
+msgid "Multisite Content Kopierer: Inhalte kopieren"
+msgstr ""
+
+#. Name of the plugin
+#: multisite-content-copier.php:313
+msgid "Multisite-Content-Kopierer"
+msgstr ""
+
+#: admin/pages/network-main-page.php:789
+msgid "Nach Blog-Vorlagengruppen auswählen"
+msgstr ""
+
+#: multisite-content-copier.php:333
+msgid "Neue Blog-Vorlagen"
+msgstr ""
+
+#: admin/pages/network-settings-page.php:24
+msgid "Neue Blog-Vorlagen-Integration"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:150
+#: admin/pages/network-blogs-groups.php:157
+msgid "Neue Gruppe hinzufügen"
+msgstr ""
+
+#: model/model.php:203
+msgid "Nichts einzufügen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:645
+msgid ""
+"Nur Netzwerk oder bereits Netzwerk aktivierte Plugins werden nicht in der "
+"Liste angezeigt"
+msgstr ""
+
+#: admin/pages/network-main-page.php:546
+msgid "Nächster Schritt &raquo;"
+msgstr ""
+
+#: admin/pages/network-main-page.php:842
+msgid ""
+"Oder füge den Slug Deines benutzerdefinierten Beitragstyps hier ein, wenn Du "
+"ihn nicht in der Liste siehst"
+msgstr ""
+
+#: admin/pages/network-main-page.php:453
+msgid "Oder suche nach Webseiten-URL"
+msgstr ""
+
+#: admin/pages/network-main-page.php:753
+msgid "Or search by site URL"
+msgstr ""
+
+#: admin/pages/network-main-page.php:405
+msgid "Plugins aktivieren"
+msgstr ""
+
+#: admin/pages/network-main-page.php:373
+msgid "Quelle auswählen"
+msgstr ""
+
+#: inc/content-copier/content-copier-post-type.php:627
+#, php-format
+msgid "Remote-Datei ist zu groß, Limit ist %s"
+msgstr ""
+
+#: inc/content-copier/content-copier-post-type.php:614
+#, php-format
+msgid "Remote-Server hat Fehlerantwort %1$d %2$s zurückgegeben"
+msgstr ""
+
+#: inc/content-copier/content-copier-post-type.php:608
+#, php-format
+msgid "Remote-Server hat nicht auf Datei geantwortet: %s"
+msgstr ""
+
+#: admin/pages/network-main-page.php:755
+msgid "Seite hinzufügen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:401
+msgid "Seiten"
+msgstr ""
+
+#: admin/pages/network-main-page.php:751
+msgid "Seiten ID"
+msgstr ""
+
+#: multisite-content-copier.php:320 multisite-content-copier.php:321
+msgid "Seiten-Gruppen"
+msgstr ""
+
+#: admin/tables/network-posts-list.php:106
+msgid "Status"
+msgstr ""
+
+#: admin/pages/network-main-page.php:623 admin/pages/network-main-page.php:721
+msgid "Suche"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:49
+msgid "Suche nach Vorlagennamen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:172
+msgid "The blog ID does not exist. Try again."
+msgstr ""
+
+#: admin/tables/network-posts-list.php:105
+msgid "Titel"
+msgstr ""
+
+#: admin/tables/network-users-list.php:18
+msgid "User"
+msgstr ""
+
+#: admin/tables/network-users-list.php:19
+msgid "Users"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:67
+msgid "Was ist eine Webseiten-Gruppe?"
+msgstr ""
+
+#: admin/tables/network-blogs-list.php:6
+msgid "Webseite"
+msgstr ""
+
+#: multisite-content-copier.php:327 admin/tables/network-blogs-list.php:7
+msgid "Webseiten"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:27
+msgid "Webseiten suchen"
+msgstr ""
+
+#: admin/edit-post.php:134 admin/pages/network-main-page.php:777
+msgid "Webseiten-Gruppe"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:66
+msgid "Webseiten-Gruppen"
+msgstr ""
+
+#: admin/pages/network-main-page.php:706
+msgid ""
+"Wenn Du nicht alle Benutzer kopierst, markiere die Benutzer in der Liste, "
+"die Du kopieren möchtest, wähle Zur Liste hinzufügen und klicke auf "
+"Übernehmen. Ausgewählte Benutzer werden unter dieser Nachricht angezeigt."
+msgstr ""
+
+#. Author of the plugin
+msgid "WMS N@W"
+msgstr ""
+
+#: admin/pages/network-main-page.php:704
+msgid "Wähle Benutzer zum Kopieren aus"
+msgstr ""
+
+#: admin/pages/network-main-page.php:397
+msgid "Wähle den Inhaltstyp aus, den Du kopieren möchtest."
+msgstr ""
+
+#: admin/pages/network-main-page.php:602
+msgid "Wähle die Elemente aus, die Du kopieren möchtest."
+msgstr ""
+
+#: admin/pages/network-main-page.php:644
+msgid "Wähle die Plugins aus, die Du aktivieren möchtest"
+msgstr ""
+
+#: admin/pages/network-main-page.php:733
+msgid "Wähle die Zielseiten aus"
+msgstr ""
+
+#: inc/helpers.php:66 inc/helpers.php:110
+msgid "Wähle eine Gruppe"
+msgstr ""
+
+#: admin/pages/network-main-page.php:173
+msgid "You need to select a blog ID"
+msgstr ""
+
+#: admin/edit-post.php:123 admin/pages/network-main-page.php:375
+msgid "Ziele auswählen"
+msgstr ""
+
+#: model/model.php:185
+msgid "Zielposts müssen ein Array sein"
+msgstr ""
+
+#: model/model.php:191
+msgid "Zielposts müssen ein kohärentes Array sein"
+msgstr ""
+
+#: admin/tables/network-blogs-list.php:159
+msgid "Zu Gruppe zuweisen"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:85
+msgid "Zurück zur Gruppenliste"
+msgstr ""
+
+#: admin/edit-post.php:154 admin/pages/network-main-page.php:612
+msgid "Zusatzoptionen"
+msgstr ""
+
+#: admin/pages/network-blogs-groups.php:99
+#: admin/pages/network-settings-page.php:37
+msgid "Änderungen speichern"
+msgstr ""

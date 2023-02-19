@@ -26,7 +26,7 @@ class Multisite_Content_Copier_Errors_Handler {
 			$plugin_data = get_plugin_data( MULTISTE_CC_PLUGIN_FILE_DIR );
 			?>
 				<div class="origin-plugin-exception" style="padding:20px 10px; margin:20px; background:#ACACAC">
-					<p><?php printf( __(  '<b>%s plugin error</b>: %s', MULTISTE_CC_LANG_DOMAIN ), $plugin_data['Name'], $message ); ?>
+					<p><?php printf( __(  '<b>%s Plugin Fehler</b>: %s', MULTISTE_CC_LANG_DOMAIN ), $plugin_data['Name'], $message ); ?>
 				</div>
 			<?php
 		}
