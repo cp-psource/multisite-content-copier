@@ -15,7 +15,7 @@ Tags: multisite plugin, multisite, classicpress-plugin
 */
 
 /*
-Copyright 2013-2021 WMS N@W (https://n3rds.work)
+Copyright 2013-2023 WMS N@W (https://n3rds.work)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
@@ -140,7 +140,7 @@ class Multisite_Content_Copier {
 		define( 'MULTISTE_CC_PLUGIN_FILE_DIR', plugin_dir_path( __FILE__ ) . 'multisite-content-copier.php' );
 
 		// Language domain
-		define( 'MULTISTE_CC_LANG_DOMAIN', MULTISTE_CC_LANG_DOMAIN );
+		define( 'MULTISTE_CC_LANG_DOMAIN', 'MULTISTE_CC_LANG_DOMAIN' );
 
 		// URLs
 		define( 'MULTISTE_CC_ASSETS_URL', MULTISTE_CC_PLUGIN_URL . 'assets/' );
