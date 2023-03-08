@@ -55,7 +55,13 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
-= 1.5.7 = DerN3rd =
+= 1.5.8 DerN3rd =
+
+* Fix: undefined constant MULTISTE_CC_LANG_DOMAIN
+* Update: PS Updater 1.1
+* Hinzugefügt: Englische Übersetzungen
+
+= 1.5.7 DerN3rd =
 
 * Textanpassungen
 * Deprecated .click() Fix
@@ -63,6 +69,6 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * PSource Updater v1.1
 * Blogvorlagen-Integration
 
-= 1.5.6 = DerN3rd =
+= 1.5.6 DerN3rd =
 
 * Release 
