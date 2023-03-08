@@ -4,14 +4,18 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: multisite, suche, netzwerk-kopierer
 Requires at least: 4.9
 Tested up to: 4.9
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Kopiere alle Inhalte von einer beliebigen Webseite in Deinem Netzwerk auf eine andere Webseite oder Gruppe von Webseiten im selben Netzwerk
 
+Copy all content from any website in your network to another website or group of websites in the same network
+
 == Description ==
+
+= Deutsch =
 
 Multisite Content Kopierer ist die perfekte Lösung zum Kopieren von Beiträgen, Seiten, Benutzern und sogar Plugins auf andere Seiten in Deinem Multisite-Netzwerk.
 
@@ -27,12 +31,27 @@ Beginne mit dem Kopieren von Inhalten ohne Konfiguration. Die mitgelieferte Assi
 
 Seiten, Beiträge, benutzerdefinierte Beitragstypen, Benutzer und Plugins können alle auf neue und bestehende Webseiten kopiert werden.
 
+= Englisch =
+
+Multisite Content Copier is the perfect solution for copying posts, pages, users and even plugins to other sites in your multisite network.
+
+Follow the simple guide to copy quickly.
+
+A great time saver
+Save a lot of time creating and setting up the website. Fill entire webpages in seconds.
+
+Deploy new website quickly with content, users and plugins. Push content to a single page, groups of pages, or any page in your network with one click.
+
+keep it simple
+Start copying content with no configuration. The included wizard guide makes it easy to start sharing content across your network right away.
+
+Pages, posts, custom post types, users and plugins can all be copied to new and existing websites.
+
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
 
 [Projektseite](https://n3rds.work/piestingtal_source/multisite-content-kopierer/)
-[Handbuch](https://n3rds.work/docs/multisite-content-kopierer/)
-[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/multisite-content-kopierer-supportforum/)
-[GitHub](https://github.com/piestingtal-source/multisite-content-copier)
+[Supportforum](https://n3rds.work/forum/multisite-content-kopierer-supportforum/)
+[GitHub](https://github.com/cp-psource/multisite-content-copier)
 
 == Mehr PSOURCE ==
 
@@ -60,6 +79,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * Fix: undefined constant MULTISTE_CC_LANG_DOMAIN
 * Update: PS Updater 1.1
 * Hinzugefügt: Englische Übersetzungen
+* Links aktualisiert
 
 = 1.5.7 DerN3rd =
 

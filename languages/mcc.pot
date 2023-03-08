@@ -334,7 +334,7 @@ msgid "https://n3rds.work"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://n3rds.work/docs/multisite-content-kopierer/"
+msgid "https://n3rds.work/cp_psource/multisite-content-kopierer/"
 msgstr ""
 
 #: admin/edit-post.php:114
