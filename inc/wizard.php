@@ -11,7 +11,7 @@ class MCC_Wizard {
 	private $parameters;
 	private $wizard_id;
 
-	public function __construct( $steps = array(), $url ) {
+	public function __construct( $url, $steps = array() ) {
 
 		if ( ! is_user_logged_in() )
 			return false;
