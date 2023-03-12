@@ -48,7 +48,7 @@ Start copying content with no configuration. The included wizard guide makes it 
 Pages, posts, custom post types, users and plugins can all be copied to new and existing websites.
 
 
-[Projektseite](https://n3rds.work/piestingtal_source/multisite-content-kopierer/)
+[Projektseite](https://n3rds.work/cp_psource/multisite-content-kopierer/)
 [Supportforum](https://n3rds.work/forum/multisite-content-kopierer-supportforum/)
 [GitHub](https://github.com/cp-psource/multisite-content-copier)
 
@@ -58,13 +58,6 @@ Pages, posts, custom post types, users and plugins can all be copied to new and 
 
 * Deutsch: de_DE
 * English: en_US
-* France: fr_FR
-* Italiono: it_IT
-* Dutch: nl_NL
-* Polish: pl_PL
-* Spanish: es_ES
-* Portuguese: pt_PT
-* Portuguese (Brazil): pt_BR
 
 Du kannst uns gerne Deine optimierten .po/.mo Dateien für Deine Muttersprache zukommen lassen. 
 Nutze die Möglichkeit dazu auf GitHub oder sende Deine Dateien an: webmaster@n3rds.work
