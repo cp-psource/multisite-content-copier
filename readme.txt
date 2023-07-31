@@ -100,6 +100,10 @@ Make a [donation by bank transfer or PayPal](https://n3rds.work/spenderaktionen/
 
 == ChangeLog ==
 
+= 1.5.9 =
+
+* Fix: PHP Deprecated:  Required parameter $url follows
+
 = 1.5.8 =
 
 * Fix: PHP Deprecated:  Required parameter
