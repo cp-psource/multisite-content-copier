@@ -192,39 +192,36 @@ abstract class Multisite_Content_Copier_Admin_Page {
 
 
 	/**
-	 * Render the main wrap of the page.
+	 * Rendert den Hauptbereich der Seite.
 	 * 
-	 * This is common to all the pages.
+	 * Dies ist allen Seiten gemeinsam.
 	 * 
-	 * @return type
+	 * @return void
 	 */
 	public function render_page() {
-
-		if ( ! current_user_can( $this->get_capability() ) )
-			wp_die( $this->forbidden_message );
-
+		if (!current_user_can($this->get_capability()))
+			wp_die($this->forbidden_message);
 		?>
-			<div class="wrap">
 
-				<?php $this->show_notice(); ?>
-				
-				<?php screen_icon( $this->screen_icon_slug ); ?>
+		<div class="wrap">
 
-				<?php if ( ! empty( $this->tabs ) ): ?>
-					<?php $this->the_tabs(); ?>
-				<?php else: ?>
-					<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
-				<?php endif; ?>
+			<?php $this->show_notice(); ?>
 
-				<?php $this->render_content(); ?>
+			<?php if (!empty($this->tabs)): ?>
+				<?php $this->the_tabs(); ?>
+			<?php else: ?>
+				<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+			<?php endif; ?>
 
-			</div>
+			<?php $this->render_content(); ?>
+
+		</div>
 
 		<?php
 	}
 
 	/**
-	 * Show WP native tabs if the tabs argument is an array
+	 * Zeigt native CP-Tabs an, wenn das Tabs-Argument ein Array ist
 	 */
 	private function the_tabs() {
 		$current_tab = $this->get_current_tab();
