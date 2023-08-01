@@ -4,7 +4,7 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: multisite, suche, netzwerk-kopierer
 Requires at least: 4.9
 Tested up to: 4.9
-Stable tag: 1.5.8
+Stable tag: 1.5.9
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -103,6 +103,7 @@ Make a [donation by bank transfer or PayPal](https://n3rds.work/spenderaktionen/
 = 1.5.9 =
 
 * Fix: PHP Deprecated:  Required parameter $url follows
+* Fix: Fehler beim Rendern der Dashboardseite seit CP1.6
 
 = 1.5.8 =
 
@@ -110,9 +111,6 @@ Make a [donation by bank transfer or PayPal](https://n3rds.work/spenderaktionen/
 * Better Readme
 * ClassicPress
 * Links-corrected
-
-= 1.5.8 =
-
 * Fix: undefined constant MULTISTE_CC_LANG_DOMAIN
 * Update: PS Updater 1.2
 * Hinzugefügt: Englische Übersetzungen
