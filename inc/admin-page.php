@@ -6,101 +6,107 @@
  * and more stuff
  */
 
-if ( ! class_exists( 'Multisite_Content_Copier_Admin_Page' ) ) {
-abstract class Multisite_Content_Copier_Admin_Page {
+ if ( ! class_exists( 'Multisite_Content_Copier_Admin_Page' ) ) {
+    abstract class Multisite_Content_Copier_Admin_Page {
 
-	// Tabs for the screen
-	private $tabs;
+        // Tabs for the screen
+        private $tabs = array();
 
-	// Menu slug
-	private $menu_slug;
+        // Menu slug
+        private $menu_slug;
 
-	// Parent Admin page
-	private $parent;
+        // Parent Admin page
+        private $parent;
 
-	// Menu title
-	private $menu_title;
+        // Menu title
+        private $menu_title;
 
-	// Page title
-	private $page_title;
+        // Page title
+        private $page_title;
 
-	// User capability needed
-	private $capability;
+        // User capability needed
+        private $capability;
 
-	// Slug for the icon (needed for styling)
-	private $screen_icon_slug;
+        // Slug for the icon (needed for styling)
+        private $screen_icon_slug;
 
-	// Message displayed when the user has no permissions to see this page
-	private $forbidden_message;
+        // Message displayed when the user has no permissions to see this page
+        private $forbidden_message;
 
-	// Page ID
-	protected $page_id;
+        // Page ID
+        protected $page_id;
 
-	/**
-	 * Constructor
-	 * 
-	 * @param String $slug Slug of the page
-	 * @param String $capability WP Capability needed to see the page
-	 * @param Array $args Array of arguments
-	 * 		tabs => Array of tabs [tab_slug] => Tab Name
-	 * 		parent => Slug of the parent menu or false if is a main menu
-	 * 		menu_title => Title of the Menu
-	 * 		page_title => Title of the page
-	 * 		screen_icon_slug => Allows applying styles to screen icons
-	 * 		network_menu => Boolean. Determines if the page is a Network Menu or Blog Menu
-	 * 		enqueue_scripts => Boolean. Determines if the page need some additional scripts.
-	 * 			Then, a custom function needs to be added to the subclass
-	 * 		enqueue_scripts => Boolean. Determines if the page need some additional styles.
-	 * 			Then, a custom function needs to be added to the subclass
-	 * 		forbidden_message => String. Message displayed when the user has no permissions to see this page
-	 */
-	public function __construct( $slug, $capability = 'manage_options', $args = array() ) {
+        // Whether it's a network menu or not
+        private $network_menu;
 
-		// Default arguments
-		$defaults = array(
-			'tabs' => array(),
-			'parent' => false,
-			'menu_title' => 'Menu title',
-			'page_title' => 'Page title',
-			'screen_icon_slug' => '',
-			'network_menu' => false,
-			'enqueue_scripts' => false,
-			'enqueue_styles' => false,
-			'forbidden_message' => 'Du hast nicht genügend Berechtigungen für den Zugriff auf diese Seite',
-			'on_load' => array()
-		);
+        // Callbacks for on load
+        private $on_load = array();
 
-		$args = wp_parse_args( $args, $defaults );
-		extract( $args );
+        /**
+         * Constructor
+         * 
+         * @param String $slug Slug of the page
+         * @param String $capability WP Capability needed to see the page
+         * @param Array $args Array of arguments
+         *      tabs => Array of tabs [tab_slug] => Tab Name
+         *      parent => Slug of the parent menu or false if is a main menu
+         *      menu_title => Title of the Menu
+         *      page_title => Title of the page
+         *      screen_icon_slug => Allows applying styles to screen icons
+         *      network_menu => Boolean. Determines if the page is a Network Menu or Blog Menu
+         *      enqueue_scripts => Boolean. Determines if the page need some additional scripts.
+         *          Then, a custom function needs to be added to the subclass
+         *      enqueue_scripts => Boolean. Determines if the page need some additional styles.
+         *          Then, a custom function needs to be added to the subclass
+         *      forbidden_message => String. Message displayed when the user has no permissions to see this page
+         */
+        public function __construct( $slug, $capability = 'manage_options', $args = array() ) {
+
+            // Default arguments
+            $defaults = array(
+                'tabs' => array(),
+                'parent' => false,
+                'menu_title' => 'Menu title',
+                'page_title' => 'Page title',
+                'screen_icon_slug' => '',
+                'network_menu' => false,
+                'enqueue_scripts' => false,
+                'enqueue_styles' => false,
+                'forbidden_message' => 'Du hast nicht genügend Berechtigungen für den Zugriff auf diese Seite',
+                'on_load' => array()
+            );
+
+            $args = wp_parse_args( $args, $defaults );
+            extract( $args );
 
 
-		if ( empty( $slug ) )
-			return;
+            if ( empty( $slug ) )
+                return;
 
-		$this->tabs = ! empty( $tabs ) ? $tabs : array();
-		$this->menu_slug = $slug;
-		$this->parent = $parent;
-		$this->menu_title = $menu_title;
-		$this->page_title = $page_title;
-		$this->capability = $capability;
-		$this->screen_icon_slug = $screen_icon_slug;
-		$this->network_menu = $network_menu;
-		$this->on_load = $on_load;
+            $this->tabs = ! empty( $tabs ) ? $tabs : array();
+            $this->menu_slug = $slug;
+            $this->parent = $parent;
+            $this->menu_title = $menu_title;
+            $this->page_title = $page_title;
+            $this->capability = $capability;
+            $this->screen_icon_slug = $screen_icon_slug;
+            $this->network_menu = $network_menu;
+            $this->on_load = $on_load;
 
-		// Network menu?
-		if ( ! $network_menu )
-			add_action( 'admin_menu', array( &$this, 'add_menu' ) );
-		else
-			add_action( 'network_admin_menu', array( &$this, 'add_menu' ) );
+            // Network menu?
+            if ( ! $network_menu )
+                add_action( 'admin_menu', array( $this, 'add_menu' ) );
+            else
+                add_action( 'network_admin_menu', array( $this, 'add_menu' ) );
 
-		// Need some scripts?
-		if ( $enqueue_scripts )
-			add_action( 'admin_enqueue_scripts', array( &$this, 'check_for_scripts' ) );
+            // Need some scripts?
+            if ( $enqueue_scripts )
+                add_action( 'admin_enqueue_scripts', array( $this, 'check_for_scripts' ) );
 
-		// Need some styles?
-		if ( $enqueue_styles )
-			add_action( 'admin_enqueue_scripts', array( &$this, 'check_for_styles' ) );
-	}
+            // Need some styles?
+            if ( $enqueue_styles )
+                add_action( 'admin_enqueue_scripts', array( $this, 'check_for_styles' ) );
+        }
 
 	/**
 	 * If the admin page need scripts, this function

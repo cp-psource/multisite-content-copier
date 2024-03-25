@@ -722,8 +722,8 @@ msgstr ""
 "this message."
 
 #. Author of the plugin/theme
-msgid "WMS N@W"
-msgstr "WMS N@W"
+msgid "PSOURCE"
+msgstr "PSOURCE"
 
 #: admin/tables/network-users-list.php:145
 msgid "Wähle Alle"

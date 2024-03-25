@@ -3,7 +3,7 @@
 Plugin Name: Multisite-Content-Kopierer
 Plugin URI: https://n3rds.work/cp_psource/multisite-content-kopierer/
 Description: Kopiere alle Inhalte von einer beliebigen Webseite in Deinem Netzwerk auf eine andere Webseite oder Gruppe von Webseiten im selben Netzwerk.
-Author: WMS N@W
+Author: PSOURCE
 Version: 1.5.9
 Author URI: https://n3rds.work
 Text Domain: mcc
@@ -15,7 +15,7 @@ Tags: multisite plugin, multisite, classicpress-plugin
 */
 
 /*
-Copyright 2013-2023 WMS N@W (https://n3rds.work)
+Copyright 2013-2023 PSOURCE (https://n3rds.work)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
@@ -32,15 +32,27 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 /**
+ * @@@@@@@@@@@@@@@@@ PS UPDATER 1.3 @@@@@@@@@@@
+ **/
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/multisite-content-copier',
+	__FILE__,
+	'multisite-content-copier'
+);
+ 
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
+/**
+ * @@@@@@@@@@@@@@@@@ ENDE PS UPDATER 1.3 @@@@@@@@@@@
+ **/
+
+/**
  * The main class of the plugin
  */
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=multisite-content-copier', 
-	__FILE__, 
-	'multisite-content-copier' 
-);
 
 class Multisite_Content_Copier {
 
