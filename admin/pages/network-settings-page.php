@@ -21,12 +21,12 @@ class Multisite_Content_Copier_Network_Settings_Menu extends Multisite_Content_C
 
  		?>
 			<form action="" method="post">
-				<h3><?php _e( 'Neue Blog-Vorlagen-Integration', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
+				<h3><?php _e( 'PS Blog Templates-Integration', MULTISTE_CC_LANG_DOMAIN ); ?></h3>
 				<p>
-					<?php _e('Um diese Option zu nutzen benötigst du das <a href="https://n3rds.work/piestingtal_source/neue-blog-vorlagen/" target="_blank" rel="noopener">Neue Blog Vorlagen Plugin</a>.'); ?>
+					<?php _e('Um diese Option zu nutzen benötigst du das <a href="https://cp-psource.github.io/blogvorlagen/" target="_blank" rel="noopener">PS Blog Templates Plugin</a>.'); ?>
 				</p>
 				<p>
-					<?php _e('Wenn Du diese Option aktivierst, kannst Du eine neue Blog-Vorlagengruppe als Ziel für kopierte Inhalte auswählen.'); ?>
+					<?php _e('Wenn Du diese Option aktivierst, kannst Du eine PS Blog Templatesgruppe als Ziel für kopierte Inhalte auswählen.'); ?>
 				</p>
 				<table class="form-table">
 					<?php $this->render_row( __( 'Aktivieren', MULTISTE_CC_LANG_DOMAIN ), array( &$this, 'render_nbt_integration_field' ) ); ?>
@@ -60,7 +60,7 @@ class Multisite_Content_Copier_Network_Settings_Menu extends Multisite_Content_C
 
  			if ( isset( $input['blog_templates_integration'] ) ) {
  				if ( ! mcc_is_nbt_active() ) {
- 					mcc_add_error( 'nbt-not-active', __( 'Du musst zuerst das Neue Blog-Vorlagen Plugin im Netzwerk aktivieren', MULTISTE_CC_LANG_DOMAIN ) );
+ 					mcc_add_error( 'nbt-not-active', __( 'Du musst zuerst das PS Blog Templates Plugin im Netzwerk aktivieren', MULTISTE_CC_LANG_DOMAIN ) );
  				}
  				else {
  					$current_settings['blog_templates_integration'] = true;

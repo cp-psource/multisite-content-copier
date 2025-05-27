@@ -398,19 +398,19 @@ msgid "Einstellungen gespeichert"
 msgstr ""
 
 #: admin/pages/network-settings-page.php:24
-msgid "Neue Blog-Vorlagen-Integration"
+msgid "PS Blog Templates-Integration"
 msgstr ""
 
 #: admin/pages/network-settings-page.php:26
 msgid ""
 "Um diese Option zu nutzen benötigst du das <a href=\"https://n3rds.work/"
 "piestingtal_source/neue-blog-vorlagen/\" target=\"_blank\" "
-"rel=\"noopener\">Neue Blog Vorlagen Plugin</a>."
+"rel=\"noopener\">PS Blog Templates Plugin</a>."
 msgstr ""
 
 #: admin/pages/network-settings-page.php:29
 msgid ""
-"Wenn Du diese Option aktivierst, kannst Du eine neue Blog-Vorlagengruppe als "
+"Wenn Du diese Option aktivierst, kannst Du eine PS Blog Templatesgruppe als "
 "Ziel für kopierte Inhalte auswählen."
 msgstr ""
 
@@ -419,7 +419,7 @@ msgid "Aktivieren"
 msgstr ""
 
 #: admin/pages/network-settings-page.php:63
-msgid "Du musst zuerst das Neue Blog-Vorlagen Plugin im Netzwerk aktivieren"
+msgid "Du musst zuerst das PS Blog Templates Plugin im Netzwerk aktivieren"
 msgstr ""
 
 #: admin/tables/network-blogs-list.php:6
@@ -625,7 +625,7 @@ msgstr ""
 #: inc/integration/nbt-integration.php:51
 #, php-format
 msgid ""
-"Das Plugin Neue Blog-Vorlagen ist aktiviert. Vielleicht möchtest Du die <a "
+"Das Plugin PS Blog Templates ist aktiviert. Vielleicht möchtest Du die <a "
 "href=\"%s\">Integration mit Multisite Content Kopierer aktivieren</a> <a "
 "href=\"%s\" class=\"button\">Verwerfen</a>"
 msgstr ""
@@ -698,7 +698,7 @@ msgid "Seiten-Gruppen"
 msgstr ""
 
 #: multisite-content-copier.php:333
-msgid "Neue Blog-Vorlagen"
+msgid "PS Blog Templates"
 msgstr ""
 
 #: multisite-content-copier.php:338 multisite-content-copier.php:339

@@ -342,7 +342,7 @@ class Multisite_Content_Copier {
 
 		$settings = mcc_get_settings();
 		if ( $settings['blog_templates_integration'] )
-			$args['tabs']['nbt'] = __( 'Neue Blog-Vorlagen', MULTISTE_CC_LANG_DOMAIN );
+			$args['tabs']['nbt'] = __( 'PS Blog Templates', MULTISTE_CC_LANG_DOMAIN );
 
 		self::$network_blog_groups_menu_page = new Multisite_Content_Copier_Network_Blogs_Groups_Menu( 'mcc_sites_groups_page', 'manage_network', $args );
 
