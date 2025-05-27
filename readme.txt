@@ -26,10 +26,6 @@ Beginne mit dem Kopieren von Inhalten ohne Konfiguration. Die mitgelieferte Assi
 
 Seiten, Beiträge, benutzerdefinierte Beitragstypen, Benutzer und Plugins können alle auf neue und bestehende Webseiten kopiert werden.
 
-[Projektseite](https://n3rds.work/cp_psource/multisite-content-kopierer/)
-[GitHub](https://github.com/cp-psource/multisite-content-copier)
-
-[POWERED BY PSOURCE](https://github.com/cp-psource)
 
 == ChangeLog ==
 

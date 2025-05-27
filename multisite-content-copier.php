@@ -1,21 +1,21 @@
 <?php
 /*
 Plugin Name: Multisite-Content-Kopierer
-Plugin URI: https://n3rds.work/cp_psource/multisite-content-kopierer/
+Plugin URI: https://cp-psource.github.io/multisite-content-copier/
 Description: Kopiere alle Inhalte von einer beliebigen Webseite in Deinem Netzwerk auf eine andere Webseite oder Gruppe von Webseiten im selben Netzwerk.
 Author: PSOURCE
 Version: 1.5.9
-Author URI: https://n3rds.work
+Author URI: https://github.com/cp-psource
 Text Domain: mcc
 Domain Path: languages
-Requires at least: 3.6
-Tested up to: 4.9
+Requires at least: 4.9
+Tested up to: 6.8.1
 Network:true
 Tags: multisite plugin, multisite, classicpress-plugin
 */
 
 /*
-Copyright 2013-2023 PSOURCE (https://n3rds.work)
+Copyright 2013-2025 PSOURCE (https://github.com/cp-psource)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
